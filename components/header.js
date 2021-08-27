@@ -11,7 +11,7 @@ export default function Header() {
           
           <Link href="/">
             <a className="inline-block">
-              <img className="w-full max-w-[219px]" src="/images/logo.svg" alt="L52 Communications" />
+              <img className="h-full w-[219px]" src="/images/logo.svg" alt="L52 Communications" />
             </a>
           </Link>
 

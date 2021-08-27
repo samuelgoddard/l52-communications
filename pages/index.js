@@ -26,15 +26,15 @@ export default function Home() {
           
           <m.div variants={fade}>
 
-            <div className="relative flex flex-wrap items-center w-full min-h-screen bg-black bg-center bg-cover" style={{backgroundImage: "url(https://placedog.net/1000?random)"}}>
+            <div className="relative flex flex-wrap items-end justify-center w-full min-h-screen bg-black bg-center bg-cover" style={{backgroundImage: "url(https://placedog.net/1000?random)"}}>
 
-              <h1 className="w-full text-center mb-4 font-display text-[6vw]  italic text-white mix-blend-difference">Experts in communication.</h1>
-
-              <nav className="absolute bottom-0 left-0 w-full z-50 py-[64px]">
+              <h1 className="w-full text-center mb-4 font-display text-[6vw] 3xl:text-[5vw] italic text-white mix-blend-difference ">Experts in communication.</h1>
+              
+              <div className="w-full self-end py-[64px]">
                 <Container>
                   <div className="flex flex-wrap items-center justify-between w-full text-sm uppercase">
                     <Link href="/">
-                      <a className="mix-blend-difference">
+                      <a className="text-white mix-blend-difference">
                         Home
                       </a>
                     </Link>
@@ -64,7 +64,7 @@ export default function Home() {
                     </Link>
                   </div>
                 </Container>
-              </nav>
+              </div>
 
             </div>
           </m.div>
