@@ -1,19 +1,26 @@
 import FancyLink from '@/components/fancyLink'
 import Container from '@/components/container'
+import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className="py-4 bg-gray-200 mb-4 md:mb-6 xl:mb-8">
+    <header className="absolute top-0 w-full z-50 py-[64px]">
       <Container>
-        <div className="flex flex-wrap">
-          <FancyLink destination="/" a11yText="Navigate to the home page" label="Next x Tailwind x Motion" extraClasses="mb-1 md:mb-0" />
 
-          <nav className="ml-auto flex space-x-3 w-full text-sm md:text-base md:w-auto">
-            <FancyLink destination="/" a11yText="Navigate to the home page" label="Home" />
+        <div className="flex flex-wrap items-center justify-between">
+          
+          <Link href="/">
+            <a className="inline-block">
+              <img className="w-full max-w-[219px]" src="/images/logo.svg" alt="L52 Communications" />
+            </a>
+          </Link>
 
-            <FancyLink destination="/about" a11yText="Navigate to the about page" label="About" />
+          <nav>
+            <FancyLink destination="/" a11yText="Open Menu" label="Menu" extraClasses="uppercase" />
           </nav>
+          
         </div>
+        
       </Container>
     </header>
   )

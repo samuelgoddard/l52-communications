@@ -6,6 +6,7 @@ import FancyLink from '@/components/fancyLink'
 import { fade } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -15,28 +16,63 @@ export default function Home() {
       <Header />
       
       <LazyMotion features={domAnimation}>
-        <m.main
+        
+        <m.div
           initial="initial"
           animate="enter"
           exit="exit"
-          className="mb-12 md:mb-16 xl:mb-24"
+          className=""
         >
-          <Container>
-            <m.article variants={fade}>
-              <h1 className="font-bold text-2xl md:text-3xl xl:text-4xl mb-4">Next x Tailwind x Motion</h1>
-              <div className="content max-w-3xl mb-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+          
+          <m.div variants={fade}>
 
-                <p>Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-              
-              <FancyLink destination="/about" a11yText="Navigate to the about page" label="About Page" />
-            </m.article>
-          </Container>
-        </m.main>
+            <div className="relative flex flex-wrap items-center w-full min-h-screen bg-black bg-center bg-cover" style={{backgroundImage: "url(https://placedog.net/1000?random)"}}>
+
+              <h1 className="w-full text-center mb-4 font-display text-[6vw]  italic text-white mix-blend-difference">Experts in communication.</h1>
+
+              <nav className="absolute bottom-0 left-0 w-full z-50 py-[64px]">
+                <Container>
+                  <div className="flex flex-wrap items-center justify-between w-full text-sm uppercase">
+                    <Link href="/">
+                      <a className="mix-blend-difference">
+                        Home
+                      </a>
+                    </Link>
+
+                    <Link href="/">
+                      <a className="text-white mix-blend-difference">
+                        Work
+                      </a>
+                    </Link>
+
+                    <Link href="/">
+                      <a className="text-white mix-blend-difference">
+                        Clients
+                      </a>
+                    </Link>
+
+                    <Link href="/">
+                      <a className="text-white mix-blend-difference">
+                        Digital Showroom
+                      </a>
+                    </Link>
+
+                    <Link href="/">
+                      <a className="text-white mix-blend-difference">
+                        Contact
+                      </a>
+                    </Link>
+                  </div>
+                </Container>
+              </nav>
+
+            </div>
+          </m.div>
+          
+        </m.div>
+
       </LazyMotion>
-
-      <Footer />
+      
     </Layout>
   )
 }
