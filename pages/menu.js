@@ -5,7 +5,7 @@ import FancyLink from '@/components/fancyLink'
 import { fade } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
-import Link from 'next/Link'
+import Link from 'next/link'
 
 export default function About() {
   return (
