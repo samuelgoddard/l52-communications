@@ -12,7 +12,7 @@ export default function About() {
     <Layout>
       <NextSeo title="About" />
 
-      <Header />
+      <Header logoWhite />
 
       <LazyMotion features={domAnimation}>
         
@@ -20,24 +20,93 @@ export default function About() {
           initial="initial"
           animate="enter"
           exit="exit"
-          className="mb-12 md:mb-16 xl:mb-24"
+          className=""
         >
           
             <m.div variants={fade}>
-              <h1 className="mb-4 text-2xl font-bold md:text-3xl xl:text-4xl">About Page</h1>
-              <div className="max-w-3xl mb-4 content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
 
-                <p>Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <div className="w-full mx-auto max-w-screen-2xl">
+
+                <div className="flex flex-wrap items-center justify-end w-full min-h-screen">
+
+                  <div className="relative w-full min-h-screen lg:w-1/2 lg:absolute lg:top-0 lg:left-0">
+
+                    <img className="absolute object-cover w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="https://placedog.net/2000?random" alt="" />
+
+                  </div>
+
+                  <div className="w-full p-6 md:px-8 lg:w-1/2 lg:px-20">
+
+                    <h1 className="mb-8 text-2xl md:text-3xl xl:text-4xl"><span className="block">Nimble &amp; tailored.</span> We help you communicate with the world around you.</h1>
+
+                    <div className="flex-wrap justify-between mb-4 content lg:flex">
+
+                      <div className="lg:pr-8 lg:w-1/2">
+                        <p>With so many fields in the midst of major changes, being adaptable in how we reach both consumers and industry insiders is more important than ever.</p>
+                      </div>
+
+                      <div className="lg:pr-8 lg:w-1/2">
+                        <p>L52 helps hone your message to media, consumers, opinion-leaders and everyone in between. Our services range from strategy and brand building to day-to-day communications management.</p>
+                      </div>
+                      
+                    </div>
+
+                    <h2 className="py-4 mt-20 mb-0 font-sans uppercase border-b text-off-black border-black/20">Services</h2>
+
+                    <dl>
+                      <dt id="one"><a href="#one">Public relations</a></dt>
+                      <dd>
+                        <p>A brief introduction goes here</p>
+                        <ul>
+                          <li>list item</li>
+                          <li>list item</li>
+                          <li>list item</li>
+                        </ul>
+                      </dd>
+
+                      <dt id="two"><a href="#two">Marketing</a></dt>
+                      <dd>
+                        <p>A brief introduction goes here</p>
+                        <ul>
+                          <li>list item</li>
+                          <li>list item</li>
+                          <li>list item</li>
+                        </ul>
+                      </dd>
+
+                      <dt id="three"><a href="#three">Events</a></dt>
+                      <dd>
+                        <p>A brief introduction goes here</p>
+                        <ul>
+                          <li>list item</li>
+                          <li>list item</li>
+                          <li>list item</li>
+                        </ul>
+                      </dd>
+
+                      <dt id="four"><a href="#four">Social Media</a></dt>
+                      <dd>
+                        <p>A brief introduction goes here</p>
+                        <ul>
+                          <li>list item</li>
+                          <li>list item</li>
+                          <li>list item</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    
+                  </div>
+
+                </div>   
+
               </div>
               
-              <FancyLink destination="/" a11yText="Navigate to the home page" label="Home Page" />
             </m.div>
           
         </m.div>
+        
       </LazyMotion>
-
-      <Footer />
+      
     </Layout>
   )
 }

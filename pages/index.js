@@ -33,19 +33,19 @@ export default function Home() {
               <div className="w-full self-end py-[64px]">
                 <Container>
                   <div className="flex flex-wrap items-center justify-between w-full text-sm uppercase">
-                    <Link href="/">
+                    <Link href="/about">
                       <a className="text-white mix-blend-difference">
-                        Home
+                        About
                       </a>
                     </Link>
 
-                    <Link href="/">
+                    <Link href="/work">
                       <a className="text-white mix-blend-difference">
                         Work
                       </a>
                     </Link>
 
-                    <Link href="/">
+                    <Link href="/clients">
                       <a className="text-white mix-blend-difference">
                         Clients
                       </a>
@@ -57,7 +57,7 @@ export default function Home() {
                       </a>
                     </Link>
 
-                    <Link href="/">
+                    <Link href="/contact">
                       <a className="text-white mix-blend-difference">
                         Contact
                       </a>

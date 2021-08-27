@@ -16,3 +16,48 @@
 body {
   @apply font-sans text-sm antialiased text-black bg-white;
 }
+
+
+
+dt {
+  @apply relative border-b border-off-black/20;
+
+  &:after {
+    content: '+';
+    @apply absolute right-0 transform -translate-y-1/2 top-1/2;
+  }
+  
+  & a {
+    @apply relative block py-6 leading-none uppercase;
+  }  
+
+  &:target {
+    @apply border-transparent text-blue;
+
+    &:after {
+      content: '-';
+    }
+
+    & + dd {
+      @apply block transition duration-500 border-b border-black/20;
+    }
+  } 
+}
+
+dd {
+  @apply hidden py-4 transition duration-500;
+
+  ul {
+    @apply mt-2; 
+    
+    & li {
+      @apply py-2;
+      
+      &:before {
+        content: '-';
+        @apply pr-2;
+        text-indent: -5px;
+      }
+    }
+  }
+}
