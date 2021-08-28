@@ -1,5 +1,5 @@
 import { useEmblaCarousel } from 'embla-carousel/react'
-import CarouselCard from '@/components/carousel-card';
+import CarouselCard from '@/components/carouselCard';
 
 export default function Carousel({ title, items, id }) {
 
@@ -23,54 +23,63 @@ export default function Carousel({ title, items, id }) {
                         image="https://placedog.net/800/500?random"
                         title="Maximillian"
                         detail="I-D magazine, February 2021"
+                        link="/work-single"
                     />
 
                     <CarouselCard
                         image="https://placedog.net/800/500?random"
                         title="Maximillian"
                         detail="I-D magazine, February 2021"
+                        link="/work-single"
                     />
 
                     <CarouselCard
                         image="https://placedog.net/800/500?random"
                         title="Maximillian"
                         detail="I-D magazine, February 2021"
+                        link="/work-single"
                     />
 
                     <CarouselCard
                         image="https://placedog.net/800/500?random"
                         title="Maximillian"
                         detail="I-D magazine, February 2021"
+                        link="/work-single"
                     />
 
                     <CarouselCard
                         image="https://placedog.net/800/500?random"
                         title="Maximillian"
                         detail="I-D magazine, February 2021"
+                        link="/work-single"
                     />
 
                     <CarouselCard
                         image="https://placedog.net/800/500?random"
                         title="Maximillian"
                         detail="I-D magazine, February 2021"
+                        link="/work-single"
                     />
 
                     <CarouselCard
                         image="https://placedog.net/800/500?random"
                         title="Maximillian"
                         detail="I-D magazine, February 2021"
+                        link="/work-single"
                     />
 
                     <CarouselCard
                         image="https://placedog.net/800/500?random"
                         title="Maximillian"
                         detail="I-D magazine, February 2021"
+                        link="/work-single"
                     />
 
                     <CarouselCard
                         image="https://placedog.net/800/500?random"
                         title="Maximillian"
                         detail="I-D magazine, February 2021"
+                        link="/work-single"
                     />
                     
                   </div>
