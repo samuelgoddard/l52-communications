@@ -31,6 +31,10 @@ module.exports = {
       "3xl": "1920px"
     },
     extend: {
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
+      },
       colors: {
         'black': '#000000',
         'off-black': '#494949',
@@ -40,7 +44,8 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+      height: ['responsive', 'hover', 'focus'],
+      transitionProperty: ['hover', 'focus'],
   },
   plugins: []
 }
