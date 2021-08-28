@@ -79,7 +79,7 @@ export default function About() {
                       </ul>
                     </nav>
 
-                    <a aria-label="Go to our Instagram page" className="py-4 mt-20 mb-0 font-sans uppercase text-blue" href="https://www.instagram.com" target="_blank" noreferrer>
+                    <a aria-label="Go to our Instagram page" className="py-4 mt-20 mb-0 font-sans uppercase text-blue" href="https://www.instagram.com" target="_blank" rel="noreferrer">
                       Instagram
                     </a>
                     

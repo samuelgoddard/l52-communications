@@ -47,11 +47,11 @@ export default function About() {
                       Press Enquiries
                     </a></p>
 
-                    <p><a aria-label="Go to our Instagram page" className="inline-block my-6 text-2xl italic lg:text-[40px] font-display text-blue" href="https://www.instagram.com" target="_blank" noreferrer>
+                    <p><a aria-label="Go to our Instagram page" className="inline-block my-6 text-2xl italic lg:text-[40px] font-display text-blue" href="https://www.instagram.com" target="_blank" rel="noreferrer">
                       Instagram
                     </a></p>
 
-                    <p><a aria-label="Go to our Linkedin page" className="inline-block my-6 text-2xl italic lg:text-[40px] font-display text-blue" href="https://www.linkedin.com" target="_blank" noreferrer>
+                    <p><a aria-label="Go to our Linkedin page" className="inline-block my-6 text-2xl italic lg:text-[40px] font-display text-blue" href="https://www.linkedin.com" target="_blank" rel="noreferrer">
                       Linkedin
                     </a></p>
 
@@ -69,7 +69,7 @@ export default function About() {
 
                         <h3 className="py-4 mt-20 mb-0 font-sans uppercase text-off-black">Contact</h3>
 
-                        <p><a className="inline-block" href="tel:+44(0)2039059999"> +44 (0)20 3905 9999</a> <br /> <a href="https://www.l52.world" aria-label="Go to L52 World">https://www.l52.world</a></p>
+                        <p><a className="inline-block" href="tel:+44(0)2039059999"> +44 (0)20 3905 9999</a> <br /> <a href="https://www.l52.world" aria-label="Go to L52 World" rel="noreferrer">https://www.l52.world</a></p>
 
                       </div>
 
