@@ -1,5 +1,4 @@
 import { useEmblaCarousel } from 'embla-carousel/react'
-import Link from 'next/link'
 import CarouselCard from '@/components/carousel-card';
 
 export default function Carousel({ title, items, id }) {

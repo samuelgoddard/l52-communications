@@ -1,7 +1,5 @@
 import Layout from '@/components/layout'
 import Header from '@/components/header'
-import Container from '@/components/container'
-import FancyLink from '@/components/fancyLink'
 import { fade } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
