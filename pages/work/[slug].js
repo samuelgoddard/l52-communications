@@ -8,8 +8,33 @@ import { NextSeo } from 'next-seo'
 import { useEmblaCarousel } from 'embla-carousel/react'
 import { PrevButton, NextButton } from "@/components/carouselButtons";
 import Link from 'next/link'
+import SanityPageService from '@/services/sanityPageService'
 
-export default function Work() {
+const query = `*[_type == "work" && slug.current == $slug][0]{
+  title,
+  client,
+  date,
+  category-> {
+    title
+  },
+  imagesCarousel[]{
+    asset->
+  },
+  slug {
+    current
+  },
+  seo {
+    ...,
+    shareGraphic {
+      asset->
+    }
+  }
+}`
+
+const pageService = new SanityPageService(query)
+
+export default function WorkSlug(initialData) {
+  const { data: { title, client, date, category, imagesCarousel, slug, seo }  } = pageService.getPreviewHook(initialData)()
 
   const [viewportRef, embla] = useEmblaCarousel({ skipSnaps: false, draggable: true, slidesToScroll: 1, });
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
@@ -39,7 +64,7 @@ export default function Work() {
 
   return (
     <Layout>
-      <NextSeo title="Work" />
+      <NextSeo title={title} />
 
       <Header />
 
@@ -61,23 +86,19 @@ export default function Work() {
                     <div className="embla mt-[-5vh]">
                       <div className="embla__viewport" ref={viewportRef}>
                         <div className="embla__container">
-                          
-                            <div className="embla__slide embla__slide--single" key="1">
-                              <div className="embla__slide__inner text-center">
-                                <div className="h-[44vh] lg:h-[58vh] mx-auto">
-                                  <img className="h-full mx-auto object-cover object-center" src="https://placedog.net/2000/700?random" alt="" />
-                                </div> 
-                              </div>
-                            </div>
-
-                            <div className="embla__slide embla__slide--single" key="1">
-                              <div className="embla__slide__inner text-center">
-                                <div className="h-[44vh] lg:h-[58vh] mx-auto">
-                                  <img className="h-full mx-auto object-cover object-center" src="https://placedog.net/2000/700?random" alt="" />
-                                </div> 
-                              </div>
-                            </div>
-
+                            {imagesCarousel.map((e,i) => {
+                              return (
+                                <div className="embla__slide embla__slide--single" key={i}>
+                                  <div className="embla__slide__inner text-center">
+                                    <div className="h-[44vh] lg:h-[58vh] mx-auto">
+                                      <img className="h-full mx-auto object-cover object-center" src={e.asset.url} alt="" />
+                                    </div> 
+                                  </div>
+                                </div>
+                              )
+                            })}
+                            
+                            {/* @TODO remove these when content's in... */}
                             <div className="embla__slide embla__slide--single" key="1">
                               <div className="embla__slide__inner text-center">
                                 <div className="h-[44vh] lg:h-[58vh] mx-auto">
@@ -114,12 +135,14 @@ export default function Work() {
                         </div>
 
                         <div className="w-full text-center sm:my-0 sm:w-1/3">
-                            <h1 className="text-2xl lg:text-3xl xl:text-4xl font-display text-blue mb-0">Maximilian</h1>
-                            <p className="uppercase text-off-black text-xs md:text-sm">i-D Magazine, February 2021</p>                    
+                            {client && (
+                              <h1 className="text-2xl lg:text-3xl xl:text-4xl font-display text-blue mb-0">{client}</h1>
+                            )}
+                            <p className="uppercase text-off-black text-xs md:text-sm">{title}, {date}</p>                    
                         </div>
 
                         <div className="w-full-4 text-center sm:my-0 sm:text-right sm:w-1/3 mt-2 sm:mt-0">
-                          <p className="italic font-display text-off-black">Editorial</p>
+                          <p className="italic font-display text-off-black">{category.title}</p>
                         </div>
                       </div>
                     </Container>
@@ -137,4 +160,20 @@ export default function Work() {
       
     </Layout>
   )
+}
+
+
+export async function getStaticProps(context) {
+  const props = await pageService.fetchQuery(context)
+  return {
+    props
+  };
+}
+
+export async function getStaticPaths() {
+  const paths = await pageService.fetchPaths('work')
+  return {
+    paths: paths,
+    fallback: false,
+  };
 }

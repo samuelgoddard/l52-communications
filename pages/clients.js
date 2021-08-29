@@ -6,10 +6,26 @@ import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-export default function About() {
+import SanityPageService from '@/services/sanityPageService'
+
+const query = `{
+  "clients": *[_type == "clients"]{
+    title,
+    logo {
+      asset ->
+    },
+    recent
+  }
+}`
+
+const pageService = new SanityPageService(query)
+
+export default function Clients(initialData) {
+  const { data: { clients }  } = pageService.getPreviewHook(initialData)()
+
   return (
     <Layout>
-      <NextSeo title="About" />
+      <NextSeo title="Clients" />
 
       <Header alwaysBlack />
 
@@ -39,83 +55,25 @@ export default function About() {
 
                     <TabPanel>
                       <ul className="flex flex-wrap items-center justify-center">
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
+                        {clients.map((client, i) => {
+                          return (
+                            <li key={i} className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                              <img src={client.logo.asset.url} alt={client.title} className="w-full" />
+                            </li>
+                          )
+                        })}
                       </ul>
                     </TabPanel>
 
                     <TabPanel>
-                    <ul className="flex flex-wrap items-center justify-center">
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
-                        <li className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                          <img src="/images/logo.svg" alt="" />
-                        </li>
+                     <ul className="flex flex-wrap items-center justify-center">
+                      {clients.map((client, i) => {
+                        return client.recent && (
+                          <li key={i} className="w-full p-6 xs:w-1/2 md:p-12 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                            <img src={client.logo.asset.url} alt={client.title} className="w-full" />
+                          </li>
+                        )
+                      })}
                       </ul>
                     </TabPanel>
 
@@ -133,4 +91,11 @@ export default function About() {
       
     </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const props = await pageService.fetchQuery(context)
+  return { 
+    props: props
+  };
 }

@@ -1,12 +1,12 @@
 export default {
-  defaultTitle: 'Boilerplate | Next x Tailwind x Motion',
-  description: 'A simple Next.js starter kit with Tailwind and Framer Motion.',
-  titleTemplate: '%s | Next x Tailwind x Motion',
+  defaultTitle: 'L52 Communications | Nimble & tailored',
+  description: 'Nimble & tailored. We help you communicate with the world around you.',
+  titleTemplate: '%s | L52 Communications',
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://sg-next-tailwind-motion.vercel.app/',
-    site_name: 'Next x Tailwind x Motion',
+    url: 'https://l52-communications.vercel.app/',
+    site_name: 'L52 Communications',
   },
   twitter: {
     handle: '@samuelgoddard',

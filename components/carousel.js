@@ -15,72 +15,30 @@ export default function Carousel({ title, items, id }) {
                <h2 className="font-sans text-center uppercase" id={`${id}`}>{title}</h2>
 
                 <div className="embla" ref={emblaRef}>
-                  
                   <div className="embla__container">
-
-                    <CarouselCard
-                        image="https://placedog.net/500/680?random"
-                        title="Maximillian"
-                        detail="I-D magazine, February 2021"
-                        link="/work-single"
-                    />
-
-                    <CarouselCard
-                        image="https://placedog.net/500/680?random"
-                        title="Maximillian"
-                        detail="I-D magazine, February 2021"
-                        link="/work-single"
-                    />
-
-                    <CarouselCard
-                        image="https://placedog.net/500/680?random"
-                        title="Maximillian"
-                        detail="I-D magazine, February 2021"
-                        link="/work-single"
-                    />
-
-                    <CarouselCard
-                        image="https://placedog.net/500/680?random"
-                        title="Maximillian"
-                        detail="I-D magazine, February 2021"
-                        link="/work-single"
-                    />
-
-                    <CarouselCard
-                        image="https://placedog.net/500/680?random"
-                        title="Maximillian"
-                        detail="I-D magazine, February 2021"
-                        link="/work-single"
-                    />
-
-                    <CarouselCard
-                        image="https://placedog.net/500/680?random"
-                        title="Maximillian"
-                        detail="I-D magazine, February 2021"
-                        link="/work-single"
-                    />
-
-                    <CarouselCard
-                        image="https://placedog.net/500/680?random"
-                        title="Maximillian"
-                        detail="I-D magazine, February 2021"
-                        link="/work-single"
-                    />
-
-                    <CarouselCard
-                        image="https://placedog.net/500/680?random"
-                        title="Maximillian"
-                        detail="I-D magazine, February 2021"
-                        link="/work-single"
-                    />
-
-                    <CarouselCard
-                        image="https://placedog.net/500/680?random"
-                        title="Maximillian"
-                        detail="I-D magazine, February 2021"
-                        link="/work-single"
-                    />
-                    
+                    {items.map((e, i) => {
+                        return (
+                            <CarouselCard
+                                key={i}
+                                image={e.teaserImage.asset.url}
+                                title={e.client}
+                                detail={`${e.title}, ${e.date}`}
+                                link={`/work/${e.slug.current}`}
+                            />        
+                        )
+                    })}
+                    {/* If items are less than 5, add a second fake loop to give the "infinite" effect */}
+                    {items.map((e, i) => {
+                        return items.length < 5 && (
+                            <CarouselCard
+                                key={i}
+                                image={e.teaserImage.asset.url}
+                                title={e.client}
+                                detail={`${e.title}, ${e.date}`}
+                                link={`/work/${e.slug.current}`}
+                            />        
+                        )
+                    })}
                   </div>
 
                 </div>      

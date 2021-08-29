@@ -7,7 +7,7 @@ export default function CarouselCard({ image, title, detail, link }) {
                 <a className="block overflow-hidden transition group w-full">
                     <div className="w-full">
                         <div className="overflow-hidden mb-4">
-                            <img className="w-full min-w-full transition-transform ease-in-out duration-[750ms] group-hover:scale-[1.1]" src={image} alt="" />
+                            <img className="w-full min-w-full transition-transform ease-in-out duration-[750ms] group-hover:scale-[1.05]" src={image} alt="" />
                         </div>
 
                         <span className="block uppercase text-blue">{title}</span>

@@ -45,7 +45,7 @@ dt {
 }
 
 dd {
-  @apply hidden py-4 transition duration-500;
+  @apply hidden pt-0 pb-4 transition duration-500;
 
   ul {
     @apply mt-2; 
@@ -79,7 +79,7 @@ dd {
   position: relative;
   padding-left: 40px;
 
-  @apply min-w-[70%] md:min-w-[40%] lg:min-w-[30%] 2xl:min-w-[28%] 3xl:min-w-[22%];
+  @apply min-w-[70%] md:min-w-[40%] lg:min-w-[30%] 2xl:min-w-[28%] 3xl:min-w-[22%] max-w-[70%] md:max-w-[40%] lg:max-w-[30%] 2xl:max-w-[28%] 3xl:max-w-[22%];
 }
 
 .embla__slide--single {
