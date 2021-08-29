@@ -11,7 +11,7 @@ export default function Home() {
     <Layout>
       <NextSeo title="Home" />
 
-      <Header />
+      <Header logoWhite menuWhite />
       
       <LazyMotion features={domAnimation}>
         
@@ -24,39 +24,43 @@ export default function Home() {
           
           <m.div variants={fade}>
 
-            <div className="relative flex flex-wrap items-end justify-center w-full min-h-screen bg-black bg-center bg-cover" style={{backgroundImage: "url(https://placedog.net/1000?random)"}}>
+            <div className="relative flex flex-wrap items-end justify-center w-full min-h-screen bg-black bg-center bg-cover">
+              <div className="absolute inset-0 z-0">
+                <video loop autoPlay muted className="w-full h-full object-center object-cover">
+                  <source src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_2MB.mp4" type="video/mp4"/>
+                  Your browser does not support the video tag.
+                </video>
+              </div>
 
-              <h1 className="w-full text-center mb-4 font-display text-[6vw] 3xl:text-[5vw] italic text-white mix-blend-difference ">Experts in communication.</h1>
+              <h1 className="w-full text-center mb-0 font-display text-[10vw] lg:text-[4.5vw] 3xl:text-[4vw] italic text-white mix-blend-difference">Experts in creative communication.</h1>
               
-              <div className="w-full self-end py-[64px]">
+              <div className="w-full self-end pb-[32px] lg:pb-[64px] relative z-10">
                 <Container>
                   <div className="flex flex-wrap items-center justify-between w-full text-sm uppercase">
                     <Link href="/about">
-                      <a className="text-white mix-blend-difference">
+                      <a className="w-1/2 md:w-auto text-white text-center">
                         About
                       </a>
                     </Link>
 
                     <Link href="/work">
-                      <a className="text-white mix-blend-difference">
+                      <a className="w-1/2 md:w-auto text-white text-center">
                         Work
                       </a>
                     </Link>
 
                     <Link href="/clients">
-                      <a className="text-white mix-blend-difference">
+                      <a className="w-1/2 md:w-auto text-white text-center">
                         Clients
                       </a>
                     </Link>
 
-                    <Link href="/">
-                      <a className="text-white mix-blend-difference">
-                        Digital Showroom
-                      </a>
-                    </Link>
+                    <a href="https://digitalshowroom.l52.world/" target="_blank" rel="noopener noreferrer" className="w-1/2 md:w-auto text-white text-center">
+                      Digital Showroom
+                    </a>
 
                     <Link href="/contact">
-                      <a className="text-white mix-blend-difference">
+                      <a className="w-1/2 md:w-auto text-white text-center">
                         Contact
                       </a>
                     </Link>

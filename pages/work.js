@@ -27,7 +27,7 @@ export default function Work() {
           initial="initial"
           animate="enter"
           exit="exit"
-          className="mt-32 lg:mt-56"
+          className="py-32 lg:py-40"
         >
           
             <m.div variants={fade}>

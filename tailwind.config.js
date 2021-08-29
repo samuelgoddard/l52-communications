@@ -40,8 +40,8 @@ module.exports = {
     },
   },
   variants: {
-      transitionProperty: ['hover', 'focus'],
-      transform: ['hover', 'group-hover'],
+    transitionProperty: ['hover', 'focus'],
+    transform: ['hover', 'group-hover'],
   },
   plugins: []
 }

@@ -44,93 +44,95 @@ export default function Work() {
       <Header />
 
       <LazyMotion features={domAnimation}>
-        
-        <m.div
-          initial="initial"
-          animate="enter"
-          exit="exit"
-          className="mt-32 lg:mt-56"
-        >
-          
-            <m.div variants={fade}>
+        <div className="flex flex-wrap items-center justify-center min-h-screen">
+          <m.div
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            className="w-full"
+          >
+            
+              <m.div variants={fade}>
 
-              <Container>
+                <Container>
 
-                <div className="relative px-8 lg:px-20">
+                  <div className="relative px-8 lg:px-20">
 
-                  <div className="embla">
-                    <div className="embla__viewport" ref={viewportRef}>
-                      <div className="embla__container">
-                        
-                          <div className="embla__slide embla__slide--single" key="1">
-                            <div className="embla__slide__inner">
-                              <div className="w-full max-h-[65vh]">
-                                <img className="object-cover w-full min-w-full" src="https://placedog.net/2000/700?random" alt="" />
-                              </div> 
+                    <div className="embla mt-[-5vh]">
+                      <div className="embla__viewport" ref={viewportRef}>
+                        <div className="embla__container">
+                          
+                            <div className="embla__slide embla__slide--single" key="1">
+                              <div className="embla__slide__inner text-center">
+                                <div className="h-[44vh] lg:h-[58vh] mx-auto">
+                                  <img className="h-full mx-auto object-cover object-center" src="https://placedog.net/2000/700?random" alt="" />
+                                </div> 
+                              </div>
                             </div>
-                          </div>
 
-                          <div className="embla__slide embla__slide--single" key="1">
-                            <div className="embla__slide__inner">
-                              <div className="w-full max-h-[65vh]">
-                                <img className="object-cover w-full min-w-full" src="https://placedog.net/2000/700?random" alt="" />
-                              </div> 
+                            <div className="embla__slide embla__slide--single" key="1">
+                              <div className="embla__slide__inner text-center">
+                                <div className="h-[44vh] lg:h-[58vh] mx-auto">
+                                  <img className="h-full mx-auto object-cover object-center" src="https://placedog.net/2000/700?random" alt="" />
+                                </div> 
+                              </div>
                             </div>
-                          </div>
 
-                          <div className="embla__slide embla__slide--single" key="1">
-                            <div className="embla__slide__inner">
-                              <div className="w-full max-h-[65vh]">
-                                <img className="object-cover w-full min-w-full" src="https://placedog.net/2000/700?random" alt="" />
-                              </div> 
+                            <div className="embla__slide embla__slide--single" key="1">
+                              <div className="embla__slide__inner text-center">
+                                <div className="h-[44vh] lg:h-[58vh] mx-auto">
+                                  <img className="h-full mx-auto object-cover object-center" src="https://placedog.net/2000/700?random" alt="" />
+                                </div> 
+                              </div>
                             </div>
-                          </div>
 
-                          <div className="embla__slide embla__slide--single" key="1">
-                            <div className="embla__slide__inner">
-                              <div className="w-full max-h-[65vh]">
-                                <img className="object-cover w-full min-w-full" src="https://placedog.net/2000/700?random" alt="" />
-                              </div> 
+                            <div className="embla__slide embla__slide--single" key="1">
+                              <div className="embla__slide__inner text-center">
+                                <div className="h-[44vh] lg:h-[58vh] mx-auto">
+                                  <img className="h-full mx-auto object-cover object-center" src="https://placedog.net/2000/700?random" alt="" />
+                                </div> 
+                              </div>
                             </div>
-                          </div>
-                        
+                          
+                        </div>
                       </div>
-                    </div>
-                    <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
-                    <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
-                  </div>   
+                      <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
+                      <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
+                    </div>   
 
-                </div>      
+                  </div>      
 
-                <div className="flex flex-wrap items-center my-20 lg:my-40">
+                  <div className="fixed bottom-0 left-0 right-0 py-[32px] lg:py-[64px]">
+                    <Container>
+                      <div className="flex flex-wrap items-end justify-center">
+                        <div className="w-full text-center sm:my-0 sm:w-1/3 sm:text-left">
+                          <Link href="/work">
+                            <a className="uppercase text-blue">
+                              Back to work
+                            </a>
+                          </Link>
+                        </div>
 
-                  <div className="w-full my-4 text-center sm:my-0 sm:w-1/3 sm:text-left">
-                    <Link href="/work">
-                      <a className="uppercase text-blue">
-                        Back to work
-                      </a>
-                    </Link>
+                        <div className="w-full text-center sm:my-0 sm:w-1/3">
+                            <h1 className="text-2xl lg:text-3xl xl:text-4xl font-display text-blue mb-0">Maximilian</h1>
+                            <p className="uppercase text-off-black text-xs md:text-sm">i-D Magazine, February 2021</p>                    
+                        </div>
+
+                        <div className="w-full-4 text-center sm:my-0 sm:text-right sm:w-1/3 mt-2 sm:mt-0">
+                          <p className="italic font-display text-off-black">Editorial</p>
+                        </div>
+                      </div>
+                    </Container>
                   </div>
 
-                  <div className="w-full my-4 text-center sm:my-0 sm:w-1/3">
-                      <p className="text-2xl font-display text-blue">Maximilian</p>
-                      <p className="uppercase text-off-black">i-D Magazine, February 2021</p>                    
-                  </div>
+                </Container>        
 
-                  <div className="w-full my-4 text-center sm:my-0 sm:text-right sm:w-1/3 ">
-                    <p className="italic font-display text-off-black">Editorial</p>
-                  </div>
-
-                </div>
-
-              </Container>        
-
-              
-              
-            </m.div>
-          
-        </m.div>
-        
+                
+                
+              </m.div>
+            
+          </m.div>
+        </div>
       </LazyMotion>
       
     </Layout>
