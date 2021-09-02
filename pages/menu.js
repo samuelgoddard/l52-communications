@@ -1,6 +1,6 @@
 import Layout from '@/components/layout'
 import Header from '@/components/header'
-import { fade } from '@/helpers/transitions'
+import { fade, reveal, imageScale } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
@@ -30,7 +30,7 @@ export default function Menu(initialData) {
           initial="initial"
           animate="enter"
           exit="exit"
-          className=""
+          className="bg-white"
         >
           
             <m.div variants={fade}>
@@ -39,10 +39,10 @@ export default function Menu(initialData) {
                 
                 <div className="flex flex-wrap items-center justify-end w-full min-h-[40vh] lg:min-h-screen lg:flex-row-reverse">
                   
-                  <div className="relative w-full min-h-[40vh] lg:min-h-screen lg:w-1/2 lg:fixed lg:top-0 lg:right-0 bg-gray-100">
-
-                    <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="/images/menu.jpeg" alt="A woman stood next to a vase in a multicoloured dress" />
-
+                  <div className="relative w-full min-h-[40vh] lg:min-h-screen lg:w-1/2 lg:fixed lg:top-0 lg:right-0 bg-gray-100 overflow-hidden">
+                    <m.div variants={imageScale}  className="absolute inset-0">
+                      <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="/images/menu.jpeg" alt="A woman stood next to a vase in a multicoloured dress" />
+                    </m.div>
                   </div>
 
                   <div className="flex-col justify-end w-full p-6 lg:px-8 lg:w-1/2 lg:p-20 lg:pl-16 lg:pt-32 lg:pb-16 lg:min-h-screen lg:flex">
@@ -51,46 +51,70 @@ export default function Menu(initialData) {
                       <ul>
                         <li>
                           <Link href="/">
-                          <a aria-label="Go to Home" className="inline-block my-2 text-[28px] italic lg:text-[3vw] xl:text-[2.7vw] font-display text-blue">
-                            Home
+                          <a aria-label="Go to Home" className="inline-block my-2 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue">
+                            <div className="relative overflow-hidden leading-tight">
+                              <m.div variants={reveal}>
+                                Home
+                              </m.div>
+                            </div>
                           </a>
                           </Link>
                         </li>
 
                         <li>
                           <Link href="/about">
-                          <a aria-label="Go to about" className="inline-block my-2 text-[28px] italic lg:text-[3vw] xl:text-[2.7vw] font-display text-blue">
-                            About Us
+                          <a aria-label="Go to about" className="inline-block my-2 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue">
+                            <div className="relative overflow-hidden leading-tight">
+                              <m.div variants={reveal}>
+                                About Us
+                              </m.div>
+                            </div>
                           </a>
                           </Link>
                         </li>
 
                         <li>
                           <Link href="/work">
-                          <a aria-label="Go to about" className="inline-block my-2 text-[28px] italic lg:text-[3vw] xl:text-[2.7vw] font-display text-blue">
-                            Work
+                          <a aria-label="Go to about" className="inline-block my-2 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue">
+                            <div className="relative overflow-hidden leading-tight">
+                              <m.div variants={reveal}>
+                                Work
+                              </m.div>
+                            </div>
                           </a>
                           </Link>
                         </li>
 
                         <li>
                           <Link href="/clients">
-                          <a aria-label="Go to clients" className="inline-block my-2 text-[28px] italic lg:text-[3vw] xl:text-[2.7vw] font-display text-blue">
-                            Clients
+                          <a aria-label="Go to clients" className="inline-block my-2 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue">
+                            <div className="relative overflow-hidden leading-tight">
+                              <m.div variants={reveal}>
+                                Clients
+                              </m.div>
+                            </div>
                           </a>
                           </Link>
                         </li>
 
                         <li>
-                          <a href="https://digitalshowroom.l52.world/" rel="noopener noreferrer" target="_blank" aria-label="Go to digital showroom" className="inline-block my-2 text-[28px] italic lg:text-[3vw] xl:text-[2.7vw] font-display text-blue">
-                            Digital Showroom
+                          <a href="https://digitalshowroom.l52.world/" rel="noopener noreferrer" target="_blank" aria-label="Go to digital showroom" className="inline-block my-2 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue">
+                            <div className="relative overflow-hidden leading-tight">
+                              <m.div variants={reveal}>
+                                Digital Showroom
+                              </m.div>
+                            </div>
                           </a>
                         </li>
 
                         <li>
                           <Link href="/contact">
-                          <a aria-label="Go to contact us" className="inline-block my-2 text-[28px] italic lg:text-[3vw] xl:text-[2.7vw] font-display text-blue">
-                            Contact us
+                          <a aria-label="Go to contact us" className="inline-block my-2 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue">
+                            <div className="relative overflow-hidden leading-tight">
+                              <m.div variants={reveal}>
+                                Contact Us
+                              </m.div>
+                            </div>
                           </a>
                           </Link>
                         </li>

@@ -1,7 +1,7 @@
 import Layout from '@/components/layout'
 import Header from '@/components/header'
 import Container from '@/components/container'
-import { fade } from '@/helpers/transitions'
+import { fade, reveal } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
@@ -62,37 +62,59 @@ export default function Home(initialData) {
                 </div>
               )}
 
-              <h1 className="w-full text-center mb-0 font-display text-[10vw] lg:text-[4.5vw] 3xl:text-[4vw] italic text-white mix-blend-difference">{home.headingText}</h1>
+              <div className="relative overflow-hidden">
+                <m.h1 variants={reveal} className="w-full text-center mb-0 pb-0 font-display text-[10vw] lg:text-[4.5vw] 3xl:text-[4vw] italic text-white mix-blend-difference">{home.headingText}</m.h1>
+              </div>
               
-              <div className="w-full self-end pb-[32px] lg:pb-[64px] relative z-10">
+              <div className="w-full self-end pb-[32px] lg:pb-[64px] relative z-10 mix-blend-difference">
                 <Container>
-                  <div className="flex flex-wrap items-center justify-between w-full text-sm uppercase">
+                  <div className="flex flex-wrap items-center justify-between w-full text-sm uppercase mix-blend-difference">
                     <Link href="/about">
-                      <a className="w-1/2 md:w-auto text-white text-center">
-                        About
-                      </a>
+                      <div className="relative overflow-hidden">
+                        <m.div variants={reveal}>
+                          <a className="w-1/2 md:w-auto text-white text-center mix-blend-difference cursor-pointer 2xl:text-[1.1rem]">
+                            About
+                          </a>
+                        </m.div>
+                      </div>
                     </Link>
 
                     <Link href="/work">
-                      <a className="w-1/2 md:w-auto text-white text-center">
-                        Work
-                      </a>
+                      <div className="relative overflow-hidden">
+                        <m.div variants={reveal}>
+                          <a className="w-1/2 md:w-auto text-white text-center mix-blend-difference cursor-pointer 2xl:text-[1.1rem]">
+                            Work
+                          </a>
+                        </m.div>
+                      </div>
                     </Link>
 
                     <Link href="/clients">
-                      <a className="w-1/2 md:w-auto text-white text-center">
-                        Clients
-                      </a>
+                      <div className="relative overflow-hidden">
+                        <m.div variants={reveal}>
+                          <a className="w-1/2 md:w-auto text-white text-center mix-blend-difference cursor-pointer 2xl:text-[1.1rem]">
+                            Clients
+                          </a>
+                        </m.div>
+                      </div>
                     </Link>
 
-                    <a href="https://digitalshowroom.l52.world/" target="_blank" rel="noopener noreferrer" className="w-1/2 md:w-auto text-white text-center">
-                      Digital Showroom
-                    </a>
+                    <div className="relative overflow-hidden">
+                      <m.div variants={reveal}>
+                        <a href="https://digitalshowroom.l52.world/" target="_blank" rel="noopener noreferrer" className="w-1/2 md:w-auto text-white text-center mix-blend-difference cursor-pointer 2xl:text-[1.1rem]">
+                          Digital Showroom
+                        </a>
+                      </m.div>
+                    </div>
 
                     <Link href="/contact">
-                      <a className="w-1/2 md:w-auto text-white text-center">
-                        Contact
-                      </a>
+                      <div className="relative overflow-hidden">
+                        <m.div variants={reveal}>
+                          <a className="w-1/2 md:w-auto text-white text-center mix-blend-difference cursor-pointer 2xl:text-[1.1rem]">
+                            Contact
+                          </a>
+                        </m.div>
+                      </div>
                     </Link>
                   </div>
                 </Container>

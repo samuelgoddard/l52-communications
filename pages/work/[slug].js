@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import Layout from '@/components/layout'
 import Header from '@/components/header'
 import Container from '@/components/container'
-import { fade } from '@/helpers/transitions'
+import { fade, reveal } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import { useEmblaCarousel } from 'embla-carousel/react'
@@ -74,7 +74,7 @@ export default function WorkSlug(initialData) {
             initial="initial"
             animate="enter"
             exit="exit"
-            className="w-full"
+            className="w-full bg-white"
           >
             
               <m.div variants={fade}>
@@ -129,20 +129,30 @@ export default function WorkSlug(initialData) {
                         <div className="w-full text-center sm:my-0 sm:w-1/3 sm:text-left">
                           <Link href="/work">
                             <a className="uppercase text-blue">
-                              Back to work
+                              <div className="overflow-hidden relative">
+                                <m.div variants={reveal}>
+                                  Back to work
+                                </m.div>
+                              </div>
                             </a>
                           </Link>
                         </div>
 
                         <div className="w-full text-center sm:my-0 sm:w-1/3">
                             {client && (
-                              <h1 className="text-2xl lg:text-3xl xl:text-4xl font-display text-blue mb-0">{client}</h1>
+                              <div className="overflow-hidden relative mb-[0.5rem]">
+                                <m.h1 variants={reveal} className="text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-display text-black mb-0 pb-0">{client}</m.h1>
+                              </div>
                             )}
-                            <p className="uppercase text-off-black text-xs md:text-sm">{title}, {date}</p>                    
+                            <div className="relative overflow-hidden">
+                              <m.p variants={reveal} className="uppercase text-off-black text-xs md:text-sm pb-0 md:pb-0 mb-0 md:mb-0">{title}, {date}</m.p>                    
+                            </div>
                         </div>
 
                         <div className="w-full-4 text-center sm:my-0 sm:text-right sm:w-1/3 mt-2 sm:mt-0">
-                          <p className="italic font-display text-off-black">{category.title}</p>
+                          <div className="relative overflow-hidden">
+                            <m.p variants={reveal} className="italic font-display text-off-black mb-0 pb-0">{category.title}</m.p>
+                          </div>
                         </div>
                       </div>
                     </Container>

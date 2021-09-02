@@ -1,10 +1,11 @@
 import Layout from '@/components/layout'
 import Header from '@/components/header'
-import { fade } from '@/helpers/transitions'
+import { fade, reveal, imageScale } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 
 import SanityPageService from '@/services/sanityPageService'
+import image from 'next/image'
 
 const query = `{
   "contact": *[_type == "contact"][0]{
@@ -44,7 +45,7 @@ export default function Contact(initialData) {
           initial="initial"
           animate="enter"
           exit="exit"
-          className=""
+          className="bg-white"
         >
           
             <m.div variants={fade}>
@@ -53,37 +54,57 @@ export default function Contact(initialData) {
                 
                 <div className="flex flex-wrap lg:items-end justify-end w-full min-h-[40vh] lg:min-h-screen lg:flex-row-reverse">
                   
-                  <div className="relative w-full min-h-[40vh] lg:min-h-screen lg:w-1/2 lg:fixed lg:top-0 lg:right-0 bg-gray-100">
-
-                    <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={contact.heroImage.asset.url} alt="" />
-
+                  <div className="relative w-full min-h-[40vh] lg:min-h-screen lg:w-1/2 lg:fixed lg:top-0 lg:right-0 bg-gray-100 overflow-hidden">
+                    <m.div variants={imageScale} className="inset-0 absolute">
+                      <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={contact.heroImage.asset.url} alt="" />
+                    </m.div>
                   </div>
 
                   <div className="w-full p-6 lg:px-8 lg:w-1/2 lg:p-20 lg:pl-16 lg:pt-16 lg:pb-16">
 
-                    <h2 className="py-4 mt-1 lg:mt-20 mb-0 font-sans uppercase text-off-black">Connect</h2>
+                    <div className="overflow-hidden relative mb-4">
+                      <m.div variants={reveal}>
+                        <h2 className="mt-1 lg:mt-20 mb-0 pb-0 font-sans uppercase text-off-black">Connect</h2>
+                      </m.div>
+                    </div>
                     
                     {contact.emailGeneralEnquiries && (
-                      <p><a aria-label="Email link for general enquiries" className="inline-block my-3 text-[28px] italic lg:text-[3vw] xl:text-[2.7vw] font-display text-blue" href={`mailto:${contact.emailGeneralEnquiries}`}>
-                        General Enquiries
+                      <p><a aria-label="Email link for general enquiries" className="inline-block my-3 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue leading-tight" href={`mailto:${contact.emailGeneralEnquiries}`}>
+                        <div className="overflow-hidden relative">
+                          <m.div variants={reveal}>
+                            General Enquiries
+                          </m.div>
+                        </div>
                       </a></p>
                     )}
 
                     {contact.emailPressEnquiries && (
-                      <p><a aria-label="Email link for press enquiries" className="inline-block my-3 text-[28px] italic lg:text-[3vw] xl:text-[2.7vw] font-display text-blue" href={`mailto:${contact.emailPressEnquiries}`}>
-                        Press Enquiries
+                      <p><a aria-label="Email link for press enquiries" className="inline-block my-3 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue leading-tight" href={`mailto:${contact.emailPressEnquiries}`}>
+                        <div className="overflow-hidden relative">
+                          <m.div variants={reveal}>
+                            Press Enquiries
+                          </m.div>
+                        </div>
                       </a></p>
                     )}
 
                     {contact.instagram && (
-                      <p><a aria-label="Go to our Instagram page" className="inline-block my-3 text-[28px] italic lg:text-[3vw] xl:text-[2.7vw] font-display text-blue" href={contact.instagram} target="_blank" rel="noreferrer">
-                        Instagram
+                      <p><a aria-label="Go to our Instagram page" className="inline-block my-3 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue leading-tight" href={contact.instagram} target="_blank" rel="noreferrer">
+                        <div className="overflow-hidden relative">
+                          <m.div variants={reveal}>
+                            Instagram
+                          </m.div>
+                        </div>
                       </a></p>
                     )}
 
                     {contact.linkedin && (
-                      <p><a aria-label="Go to our Linkedin page" className="inline-block my-3 text-[28px] italic lg:text-[3vw] xl:text-[2.7vw] font-display text-blue" href={contact.linkedin} target="_blank" rel="noreferrer">
-                        Linkedin
+                      <p><a aria-label="Go to our Linkedin page" className="inline-block my-3 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue leading-tight" href={contact.linkedin} target="_blank" rel="noreferrer">
+                        <div className="overflow-hidden relative">
+                          <m.div variants={reveal}>
+                            Linkedin
+                          </m.div>
+                        </div>
                       </a></p>
                     )}
 

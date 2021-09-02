@@ -51,7 +51,7 @@ dd {
     @apply mt-2; 
     
     & li {
-      @apply py-2;
+      @apply pb-[0.25rem];
       
       &:before {
         content: '-';
