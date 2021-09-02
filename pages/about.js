@@ -30,7 +30,6 @@ const query = `{
 
 const pageService = new SanityPageService(query)
 
-
 export default function About(initialData) {
   const { data: { about }  } = pageService.getPreviewHook(initialData)()
 
