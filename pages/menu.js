@@ -45,8 +45,16 @@ export default function Menu(initialData) {
                     </m.div>
                   </div>
 
+                  <m.div
+                    initial="initial"
+                    animate="enter"
+                    exit="exit"
+                    className="w-full"
+                    variants={{
+                      enter: { transition: { staggerChildren: 0.04 } }
+                    }}
+                  >
                   <div className="flex-col justify-end w-full p-6 lg:px-8 lg:w-1/2 lg:p-20 lg:pl-16 lg:pt-32 lg:pb-16 lg:min-h-screen lg:flex">
-
                     <nav>
                       <ul>
                         <li>
@@ -128,6 +136,7 @@ export default function Menu(initialData) {
                     )}
                     
                   </div>
+                  </m.div>
 
                 </div>
 

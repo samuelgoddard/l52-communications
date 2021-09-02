@@ -77,6 +77,15 @@ export default function About(initialData) {
                         </div>
                       </div>
 
+                      <m.div
+                        initial="initial"
+                        animate="enter"
+                        exit="exit"
+                        className="w-full"
+                        variants={{
+                          enter: { transition: { staggerChildren: 0.04 } }
+                        }}
+                      >
                       <dl>
                         {about.services.map((service, i) => {
                           return (
@@ -97,6 +106,7 @@ export default function About(initialData) {
                           )
                         })}
                       </dl>
+                      </m.div>
                     </div>
                   </div>
 

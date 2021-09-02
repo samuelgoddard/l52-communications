@@ -101,6 +101,7 @@ export default function WorkIndex(initialData) {
                     id={cat.slug.current}
                     title={cat.title}
                     items={cat.relatedWork}
+                    key={i}
                   />
                 )
               })}

@@ -62,6 +62,15 @@ export default function Contact(initialData) {
 
                   <div className="w-full p-6 lg:px-8 lg:w-1/2 lg:p-20 lg:pl-16 lg:pt-16 lg:pb-16">
 
+                  <m.div
+                    initial="initial"
+                    animate="enter"
+                    exit="exit"
+                    className="w-full"
+                    variants={{
+                      enter: { transition: { staggerChildren: 0.04 } }
+                    }}
+                  >
                     <div className="overflow-hidden relative mb-4">
                       <m.div variants={reveal}>
                         <h2 className="mt-1 lg:mt-20 mb-0 pb-0 font-sans uppercase text-off-black">Connect</h2>
@@ -129,6 +138,7 @@ export default function Contact(initialData) {
                       </div>
 
                     </div>
+                    </m.div>
                     
                   </div>
 
