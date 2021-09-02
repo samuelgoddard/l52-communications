@@ -1,6 +1,8 @@
 import FancyLink from '@/components/fancyLink'
 import Container from '@/components/container'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+
 
 export default function Header({ logoWhite, menuWhite, isMenu, logoBlack, menuBlack }) {
   let logoColorTheme = ''
@@ -17,6 +19,8 @@ export default function Header({ logoWhite, menuWhite, isMenu, logoBlack, menuBl
   } else if (logoBlack) {
     menuColorTheme = 'text-black'
   }
+  
+  const router = useRouter()
 
   return (
     <header className="absolute top-0 w-full z-50 py-[32px] lg:py-[64px] lg:fixed text-white mix-blend-difference">
@@ -29,7 +33,12 @@ export default function Header({ logoWhite, menuWhite, isMenu, logoBlack, menuBl
           </Link>
 
           <nav>
-            <FancyLink destination={`${isMenu ? '/' : '/menu'}`} a11yText={`${isMenu ? 'Close Menu' : 'Open Menu'}`} label={`${isMenu ? 'Close' : 'Menu'}`} extraClasses={`uppercase text-white mix-blend-difference 2xl:text-[1.1rem]`}/>
+            {isMenu ? (
+              <button className="uppercase text-white mix-blend-difference 2xl:text-[1.1rem] hover:outline-none focus:outline-none" onClick={() => router.back()}>Close</button>
+            ) : (
+              <FancyLink destination={`/menu`} a11yText={`Open Menu`} label={'Menu'} extraClasses={`uppercase text-white mix-blend-difference 2xl:text-[1.1rem]`}/>  
+            )}
+            
           </nav>
         </div>       
       </Container>
