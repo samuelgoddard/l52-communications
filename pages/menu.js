@@ -59,7 +59,7 @@ export default function Menu(initialData) {
                       <ul>
                         <li>
                           <Link href="/">
-                          <a aria-label="Go to Home" className="inline-block my-2 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue">
+                          <a aria-label="Go to Home" className="inline-block my-2 text-[28px] italic lg:text-[3vw] xl:text-[3vw] font-display text-blue">
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 Home
@@ -71,7 +71,7 @@ export default function Menu(initialData) {
 
                         <li>
                           <Link href="/about">
-                          <a aria-label="Go to about" className="inline-block my-2 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue">
+                          <a aria-label="Go to about" className="inline-block my-2 text-[28px] italic lg:text-[3vw] xl:text-[3vw] font-display text-blue">
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 About Us
@@ -83,7 +83,7 @@ export default function Menu(initialData) {
 
                         <li>
                           <Link href="/work">
-                          <a aria-label="Go to about" className="inline-block my-2 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue">
+                          <a aria-label="Go to about" className="inline-block my-2 text-[28px] italic lg:text-[3vw] xl:text-[3vw] font-display text-blue">
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 Work
@@ -95,7 +95,7 @@ export default function Menu(initialData) {
 
                         <li>
                           <Link href="/clients">
-                          <a aria-label="Go to clients" className="inline-block my-2 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue">
+                          <a aria-label="Go to clients" className="inline-block my-2 text-[28px] italic lg:text-[3vw] xl:text-[3vw] font-display text-blue">
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 Clients
@@ -106,7 +106,7 @@ export default function Menu(initialData) {
                         </li>
 
                         <li>
-                          <a href="https://digitalshowroom.l52.world/" rel="noopener noreferrer" target="_blank" aria-label="Go to digital showroom" className="inline-block my-2 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue">
+                          <a href="https://digitalshowroom.l52.world/" rel="noopener noreferrer" target="_blank" aria-label="Go to digital showroom" className="inline-block my-2 text-[28px] italic lg:text-[3vw] xl:text-[3vw] font-display text-blue">
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 Digital Showroom
@@ -117,7 +117,7 @@ export default function Menu(initialData) {
 
                         <li>
                           <Link href="/contact">
-                          <a aria-label="Go to contact us" className="inline-block my-2 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue">
+                          <a aria-label="Go to contact us" className="inline-block my-2 text-[28px] italic lg:text-[3vw] xl:text-[3vw] font-display text-blue">
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 Contact Us

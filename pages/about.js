@@ -63,7 +63,7 @@ export default function About(initialData) {
                   <div className="w-full pt-8 p-6 md:px-8 lg:w-1/2 lg:px-[6vw] lg:py-[12vh]">
                     
                     <div className="mx-auto max-w-[760px]">
-                      <h1 className="mb-8 text-2xl md:text-3xl xl:text-4xl 2xl:text-[2.8rem] 2xl:leading-tight">{about.headingText}</h1>
+                      <h1 className="mb-8 text-2xl md:text-3xl xl:text-4xl 2xl:text-[2.8rem] 2xl:leading-tight lg:mt-[3rem]">{about.headingText}</h1>
 
                       <div className="flex-wrap justify-between mb-4 lg:flex">
                         <div className="lg:pr-8 pb-4 content content--cols text-off-black 2xl:text-[1.1rem]">
@@ -73,7 +73,7 @@ export default function About(initialData) {
 
                       <div className="pt-4 pb-6 border-b text-off-black border-black/20 ">
                         <div className="overflow-hidden relative">
-                          <m.h2 variants={reveal} className="mt-8 2xl:mt-12 lg:mt-20 mb-0 pb-0 leading-none font-sans uppercase 2xl:text-[1.1rem]">Services</m.h2>
+                          <m.h2 variants={reveal} className="mt-6 2xl:mt-10 lg:mt-8 mb-0 pb-0 leading-none font-sans uppercase 2xl:text-[1.1rem]">Services</m.h2>
                         </div>
                       </div>
 

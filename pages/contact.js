@@ -78,7 +78,7 @@ export default function Contact(initialData) {
                     </div>
                     
                     {contact.emailGeneralEnquiries && (
-                      <p><a aria-label="Email link for general enquiries" className="inline-block my-3 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue leading-tight" href={`mailto:${contact.emailGeneralEnquiries}`}>
+                      <p><a aria-label="Email link for general enquiries" className="inline-block my-3 text-[28px] italic lg:text-[3vw] xl:text-[3vw] font-display text-blue leading-tight" href={`mailto:${contact.emailGeneralEnquiries}`}>
                         <div className="overflow-hidden relative">
                           <m.div variants={reveal}>
                             General Enquiries
@@ -88,7 +88,7 @@ export default function Contact(initialData) {
                     )}
 
                     {contact.emailPressEnquiries && (
-                      <p><a aria-label="Email link for press enquiries" className="inline-block my-3 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue leading-tight" href={`mailto:${contact.emailPressEnquiries}`}>
+                      <p><a aria-label="Email link for press enquiries" className="inline-block my-3 text-[28px] italic lg:text-[3vw] xl:text-[3vw] font-display text-blue leading-tight" href={`mailto:${contact.emailPressEnquiries}`}>
                         <div className="overflow-hidden relative">
                           <m.div variants={reveal}>
                             Press Enquiries
@@ -98,7 +98,7 @@ export default function Contact(initialData) {
                     )}
 
                     {contact.instagram && (
-                      <p><a aria-label="Go to our Instagram page" className="inline-block my-3 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue leading-tight" href={contact.instagram} target="_blank" rel="noreferrer">
+                      <p><a aria-label="Go to our Instagram page" className="inline-block my-3 text-[28px] italic lg:text-[3vw] xl:text-[3vw] font-display text-blue leading-tight" href={contact.instagram} target="_blank" rel="noreferrer">
                         <div className="overflow-hidden relative">
                           <m.div variants={reveal}>
                             Instagram
@@ -108,7 +108,7 @@ export default function Contact(initialData) {
                     )}
 
                     {contact.linkedin && (
-                      <p><a aria-label="Go to our Linkedin page" className="inline-block my-3 text-[28px] italic lg:text-[2.7rem] xl:text-[3rem] font-display text-blue leading-tight" href={contact.linkedin} target="_blank" rel="noreferrer">
+                      <p><a aria-label="Go to our Linkedin page" className="inline-block my-3 text-[28px] italic lg:text-[3vw] xl:text-[3vw] font-display text-blue leading-tight" href={contact.linkedin} target="_blank" rel="noreferrer">
                         <div className="overflow-hidden relative">
                           <m.div variants={reveal}>
                             Linkedin
