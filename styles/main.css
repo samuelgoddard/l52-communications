@@ -129,13 +129,13 @@ dd {
   width: 100%;
 }
 
-.embla__viewport.is-draggable {
-  cursor: move;
-  cursor: grab;
+.is-draggable {
+  cursor: move !important;
+  cursor: grab !important;
 }
 
-.embla__viewport.is-dragging {
-  cursor: grabbing;
+.is-dragging {
+  cursor: grabbing !important;
 }
 
 

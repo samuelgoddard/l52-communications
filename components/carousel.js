@@ -7,7 +7,8 @@ export default function Carousel({ title, items, id }) {
 
     const [emblaRef, emblaApi] = useEmblaCarousel({
         loop: true,
-        dragFree: true
+        dragFree: true,
+        clickAllowed: false
     });
 
     return (
@@ -18,7 +19,7 @@ export default function Carousel({ title, items, id }) {
                     <m.h2 variants={reveal} className="font-sans text-center uppercase mb-0 pb-0" id={`${id}`}>{title}</m.h2>
                 </div>
 
-                <div className="embla" ref={emblaRef}>
+                <div className="embla embla__viewport" ref={emblaRef}>
                   <div className="embla__container">
                     {items.map((e, i) => {
                         return (
