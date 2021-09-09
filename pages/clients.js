@@ -64,7 +64,7 @@ export default function Clients(initialData) {
                     <TabPanel>
                       <ul className="flex flex-wrap items-center justify-center">
                         {clients.map((client, i) => {
-                          return (
+                          return !client.recent && (
                             <li key={i} className="w-1/2 p-8 xs:p-10 xs:w-1/2 md:p-10 lg:py-20 md:w-1/3 lg:w-1/4 xl:w-[12%]">
                               <img src={client.logo.asset.url} alt={client.title} className="w-full" />
                             </li>
