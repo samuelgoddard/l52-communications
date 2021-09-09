@@ -96,7 +96,6 @@ export default function Contact(initialData) {
                         </div>
                       </a></p>
                     )}
-                    
 
                     {contact.instagram && (
                       <p><a aria-label="Go to our Instagram page" className="inline-block my-3 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue leading-tight" href={contact.instagram} target="_blank" rel="noreferrer">
