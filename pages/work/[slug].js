@@ -96,25 +96,7 @@ export default function WorkSlug(initialData) {
                                   </div>
                                 </div>
                               )
-                            })}
-                            
-                            {/* @TODO remove these when content's in... */}
-                            <div className="embla__slide embla__slide--single" key="1">
-                              <div className="embla__slide__inner text-center">
-                                <div className="h-[44vh] lg:h-[58vh] mx-auto">
-                                  <img className="h-full mx-auto object-cover object-center" src="https://placedog.net/2000/700?random" alt="" />
-                                </div> 
-                              </div>
-                            </div>
-
-                            <div className="embla__slide embla__slide--single" key="1">
-                              <div className="embla__slide__inner text-center">
-                                <div className="h-[44vh] lg:h-[58vh] mx-auto">
-                                  <img className="h-full mx-auto object-cover object-center" src="https://placedog.net/2000/700?random" alt="" />
-                                </div> 
-                              </div>
-                            </div>
-                          
+                            })}                          
                         </div>
                       </div>
                       <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
