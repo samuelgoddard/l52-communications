@@ -81,8 +81,8 @@ export default function WorkIndex(initialData) {
                 <ul className="flex flex-wrap justify-center max-w-3xl mx-auto">
                   {categories.map((cat, i) => {
                     return cat.relatedWork.length > 0 && (
-                      <li className="w-1/2 sm:w-1/3 md:w-1/5" id={i}>
-                        <a className="block px-4 py-2 text-center uppercase cursor-pointer text-blue" data-target={cat.slug.current} onClick={scrollToTarget}>
+                      <li className="w-1/2 sm:w-1/3 md:w-1/5" id={i} key={i}>
+                        <a className="block px-4 py-2 text-center uppercase cursor-pointer text-blue" data-target={cat.slug.current} href={`#${cat.slug.current}`}>
                           <div className="overflow-hidden relative">
                             <m.div variants={reveal}>
                               {cat.title}

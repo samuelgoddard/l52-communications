@@ -6,10 +6,29 @@ import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 
 import SanityPageService from '@/services/sanityPageService'
+import { useState } from 'react'
 
 const query = `{
   "contact": *[_type == "contact"][0]{
     instagram,
+    homeMenuImage {
+      asset ->
+    },
+    aboutMenuImage {
+      asset ->
+    },
+    workMenuImage {
+      asset ->
+    },
+    clientsMenuImage {
+      asset ->
+    },
+    digitalShowroomMenuImage {
+      asset ->
+    },
+    contactMenuImage {
+      asset ->
+    }
   }
 }`
 
@@ -17,6 +36,7 @@ const pageService = new SanityPageService(query)
 
 export default function Menu(initialData) {
   const { data: { contact }  } = pageService.getPreviewHook(initialData)()
+  const [currentImage, setCurrentImage] = useState(0);
 
   return (
     <Layout>
@@ -42,6 +62,42 @@ export default function Menu(initialData) {
                   <div className="relative w-full min-h-[40vh] lg:min-h-screen lg:w-1/2 lg:fixed lg:top-0 lg:right-0 bg-gray-100 overflow-hidden">
                     <m.div variants={imageScale}  className="absolute inset-0">
                       <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="/images/menu.jpeg" alt="A woman stood next to a vase in a multicoloured dress" />
+
+                      {contact.homeMenuImage && (
+                        <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 'home' ? 'opacity-100' : 'opacity-0' }`}>
+                          <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={contact.homeMenuImage.asset.url} alt="" />
+                        </div>
+                      )}
+                      
+                      {contact.aboutMenuImage && (
+                        <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 'about' ? 'opacity-100' : 'opacity-0' }`}>
+                          <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={contact.aboutMenuImage.asset.url} alt="" />
+                        </div>
+                      )}
+
+                      {contact.workMenuImage && (
+                        <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 'work' ? 'opacity-100' : 'opacity-0' }`}>
+                          <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={contact.workMenuImage.asset.url} alt="" />
+                        </div>
+                      )}
+
+                      {contact.clientsMenuImage && (
+                        <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 'clients' ? 'opacity-100' : 'opacity-0' }`}>
+                          <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={contact.clientsMenuImage.asset.url} alt="" />
+                        </div>
+                      )}
+
+                      {contact.digitalShowroomMenuImage && (
+                        <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 'digital-showroom' ? 'opacity-100' : 'opacity-0' }`}>
+                          <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={contact.digitalShowroomMenuImage.asset.url} alt="" />
+                        </div>
+                      )}
+
+                      {contact.contactMenuImage && (
+                        <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 'contact' ? 'opacity-100' : 'opacity-0' }`}>
+                          <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={contact.contactMenuImage.asset.url} alt="" />
+                        </div>
+                      )}
                     </m.div>
                   </div>
 
@@ -59,7 +115,7 @@ export default function Menu(initialData) {
                       <ul>
                         <li>
                           <Link href="/">
-                          <a aria-label="Go to Home" className="inline-block my-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue">
+                          <a aria-label="Go to Home" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue" onMouseOver={() => setCurrentImage('home')} onMouseLeave={() => setCurrentImage(null)}>
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 Home
@@ -71,7 +127,7 @@ export default function Menu(initialData) {
 
                         <li>
                           <Link href="/about">
-                          <a aria-label="Go to about" className="inline-block my-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue">
+                          <a aria-label="Go to about" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue" onMouseOver={() => setCurrentImage('about')} onMouseLeave={() => setCurrentImage(null)}>
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 About Us
@@ -83,7 +139,7 @@ export default function Menu(initialData) {
 
                         <li>
                           <Link href="/work">
-                          <a aria-label="Go to about" className="inline-block my-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue">
+                          <a aria-label="Go to about" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue" onMouseOver={() => setCurrentImage('work')} onMouseLeave={() => setCurrentImage(null)}>
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 Work
@@ -95,7 +151,7 @@ export default function Menu(initialData) {
 
                         <li>
                           <Link href="/clients">
-                          <a aria-label="Go to clients" className="inline-block my-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue">
+                          <a aria-label="Go to clients" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue" onMouseOver={() => setCurrentImage('clients')} onMouseLeave={() => setCurrentImage(null)}>
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 Clients
@@ -106,7 +162,7 @@ export default function Menu(initialData) {
                         </li>
 
                         <li>
-                          <a href="https://digitalshowroom.l52.world/" rel="noopener noreferrer" target="_blank" aria-label="Go to digital showroom" className="inline-block my-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue">
+                          <a href="https://digitalshowroom.l52.world/" rel="noopener noreferrer" target="_blank" aria-label="Go to digital showroom" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue" onMouseOver={() => setCurrentImage('digital-showroom')} onMouseLeave={() => setCurrentImage(null)}>
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 Digital Showroom
@@ -117,7 +173,7 @@ export default function Menu(initialData) {
 
                         <li>
                           <Link href="/contact">
-                          <a aria-label="Go to contact us" className="inline-block my-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue">
+                          <a aria-label="Go to contact us" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue" onMouseOver={() => setCurrentImage('contact')} onMouseLeave={() => setCurrentImage(null)}>
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 Contact Us

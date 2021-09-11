@@ -6,6 +6,7 @@ import { NextSeo } from 'next-seo'
 
 import BlockContent from '@sanity/block-content-to-react'
 import SanityPageService from '@/services/sanityPageService'
+import { useState } from 'react'
 
 const query = `{
   "about": *[_type == "about"][0]{
@@ -17,7 +18,10 @@ const query = `{
     text,
     services[] {
       title,
-      text
+      text,
+      supportingImage {
+        asset ->
+      },
     },
     seo {
       ...,
@@ -32,6 +36,7 @@ const pageService = new SanityPageService(query)
 
 export default function About(initialData) {
   const { data: { about }  } = pageService.getPreviewHook(initialData)()
+  const [currentImage, setCurrentImage] = useState(0);
 
   return (
     <Layout>
@@ -57,6 +62,38 @@ export default function About(initialData) {
                   <div className="relative w-full min-h-[40vh] lg:min-h-screen lg:w-1/2 lg:max-h-screen lg:fixed lg:top-0 lg:left-0 lg:bottom-0 bg-gray-100 overflow-hidden">
                     <m.div variants={imageScale} className="absolute inset-0">
                       <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={about.heroImage.asset.url} alt="" />
+                      
+                      <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 1 ? 'opacity-100' : 'opacity-0' }`}>
+                        <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={about.services[0].supportingImage.asset.url} alt="" />
+                      </div>
+
+                      <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 2 ? 'opacity-100' : 'opacity-0' }`}>
+                        <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={about.services[1].supportingImage.asset.url} alt="" />
+                      </div>
+
+                      {about.services.length > 2 && (
+                        <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 3 ? 'opacity-100' : 'opacity-0' }`}>
+                          <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={about.services[2].supportingImage.asset.url} alt="" />
+                        </div>
+                      )}
+
+                      {about.services.length > 3 && (
+                        <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 4 ? 'opacity-100' : 'opacity-0' }`}>
+                          <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={about.services[3].supportingImage.asset.url} alt="" />
+                        </div>
+                      )}
+                      
+                      {about.services.length > 4 && (
+                        <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 5 ? 'opacity-100' : 'opacity-0' }`}>
+                          <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={about.services[4].supportingImage.asset.url} alt="" />
+                        </div>
+                      )}
+
+                      {about.services.length > 5 && (
+                        <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 6 ? 'opacity-100' : 'opacity-0' }`}>
+                          <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={about.services[5].supportingImage.asset.url} alt="" />
+                        </div>
+                      )}
                     </m.div>
                   </div>
 
@@ -91,7 +128,7 @@ export default function About(initialData) {
                           return (
                             <div key={i}>
                               <dt id={`service-${i}`} className="2xl:text-[1.1rem]">
-                                <a href={`#service-${i}`}>
+                                <a href={`#service-${i}`} onClick={() => setCurrentImage(i + 1)}>
                                   <div className="overflow-hidden relative">
                                     <m.div variants={reveal}>{service.title}</m.div>
                                   </div>

@@ -1,15 +1,18 @@
 import { useEmblaCarousel } from 'embla-carousel/react'
+import React, { useState, useEffect, useCallback } from "react";
 import CarouselCard from '@/components/carouselCard';
 import { fade, reveal, imageScale } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 
 export default function Carousel({ title, items, id }) {
 
-    const [emblaRef, emblaApi] = useEmblaCarousel({
-        loop: true,
-        dragFree: true,
-        clickAllowed: false
+    const [viewportRef, embla] = useEmblaCarousel({ loop: true,
+        dragFree: true
     });
+
+    useEffect(() => {
+        if (!embla) return;
+      }, [embla]);
 
     return (
 
@@ -19,7 +22,7 @@ export default function Carousel({ title, items, id }) {
                     <m.h2 variants={reveal} className="font-sans text-center uppercase mb-0 pb-0" id={`${id}`}>{title}</m.h2>
                 </div>
 
-                <div className="embla embla__viewport" ref={emblaRef}>
+                <div className={`embla embla__viewport`} ref={viewportRef}>
                   <div className="embla__container">
                     {items.map((e, i) => {
                         return (

@@ -15,6 +15,11 @@
 /* Simple defaults */
 body {
   @apply font-sans text-sm antialiased text-black bg-white;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 
