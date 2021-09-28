@@ -27,12 +27,26 @@ export default function Carousel({ title, items, id }) {
                 <div className={`embla embla__viewport`} ref={emblaRef}>
                   <div className="embla__container">
                     {items.map((e, i) => {
+                        let detailTitle = '';
+                        let detailDate = '';
+                        let detailNone = '';
+
+                        if (e.title) {
+                            detailTitle = e.title
+                        }
+                        if (e.date) {
+                            detailDate = e.date
+                        }
+
+                        if (!e.date && !e.title) {
+                            detailNone = 'View More'
+                        }
                         return (
                             <CarouselCard
                                 key={i}
                                 image={e.teaserImage.asset.url}
                                 title={e.client}
-                                detail={`${e.title}, ${e.date}`}
+                                detail={`${detailTitle} ${detailDate} ${detailNone}`}
                                 link={`/work/${e.slug.current}`}
                                 onClick={() => onSlideClick(i)}
                             />        
@@ -40,12 +54,26 @@ export default function Carousel({ title, items, id }) {
                     })}
                     {/* If items are less than 5, add a second fake loop to give the "infinite" effect */}
                     {items.map((e, i) => {
+                        let detailTitle = '';
+                        let detailDate = '';
+                        let detailNone = '';
+
+                        if (e.title) {
+                            detailTitle = e.title
+                        }
+                        if (e.date) {
+                            detailDate = e.date
+                        }
+
+                        if (!e.date && !e.title) {
+                            detailNone = 'View More'
+                        }
                         return items.length < 5 && (
                             <CarouselCard
                                 key={i}
                                 image={e.teaserImage.asset.url}
                                 title={e.client}
-                                detail={`${e.title}, ${e.date}`}
+                                detail={`${detailTitle} ${detailDate} ${detailNone}`}
                                 link={`/work/${e.slug.current}`}
                             />        
                         )
