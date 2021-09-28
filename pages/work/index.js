@@ -20,7 +20,7 @@ const query = `{
       current
     }
   },
-  "categories": *[_type == "categories"] | order(title) {
+  "categories": *[_type == "categories"] | order(order asc) {
     slug {
       current
     },
