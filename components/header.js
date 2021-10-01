@@ -23,7 +23,7 @@ export default function Header({ logoWhite, menuWhite, isMenu, logoBlack, menuBl
   const router = useRouter()
 
   return (
-    <header className="absolute top-0 w-full z-50 py-[32px] lg:py-[64px] lg:fixed text-white mix-blend-difference">
+    <header className="absolute top-0 w-full z-[100] py-[32px] lg:py-[64px] lg:fixed text-white mix-blend-difference">
       <Container>
         <div className="flex flex-wrap items-center justify-between text-white mix-blend-difference">
           <Link href="/">

@@ -15,11 +15,6 @@
 /* Simple defaults */
 body {
   @apply font-sans text-sm antialiased text-black bg-white;
-  scroll-behavior: smooth;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 
@@ -84,7 +79,7 @@ dd {
   position: relative;
   padding-left: 40px;
 
-  @apply min-w-[70%] md:min-w-[40%] lg:min-w-[30%] 2xl:min-w-[28%] 3xl:min-w-[22%] max-w-[70%] md:max-w-[40%] lg:max-w-[30%] 2xl:max-w-[28%] 3xl:max-w-[22%];
+  @apply min-w-[70%] md:min-w-[35%] lg:min-w-[28%] 2xl:min-w-[22%] 3xl:min-w-[18%] max-w-[70%] md:max-w-[35%] lg:max-w-[28%] 2xl:max-w-[22%] 3xl:max-w-[18%];
 }
 
 .embla__slide--single {

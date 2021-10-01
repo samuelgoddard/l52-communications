@@ -5,8 +5,11 @@ import { fade, reveal, imageScale } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import Carousel from '@/components/carousel'
+import { LocomotiveScrollProvider, useLocomotiveScroll } from 'react-locomotive-scroll'
 
 import SanityPageService from '@/services/sanityPageService'
+import { useRef } from 'react'
+import ScrollToButton from '@/components/scroll-to-button'
 
 const query = `{
   "work": *[_type == "work"]{
@@ -14,7 +17,9 @@ const query = `{
     client,
     date,
     teaserImage {
-      asset ->
+      asset -> {
+        ...
+      }
     },
     slug {
       current
@@ -32,7 +37,9 @@ const query = `{
       client,
       date,
       teaserImage {
-        asset ->
+        asset -> {
+          ...
+        }
       },
       slug {
         current
@@ -45,6 +52,7 @@ const pageService = new SanityPageService(query)
 
 export default function WorkIndex(initialData) {
   const { data: { work, categories }  } = pageService.getPreviewHook(initialData)()
+  const containerRef = useRef(null)
 
   const scrollToTarget = (e) => {
     e.preventDefault();
@@ -60,57 +68,63 @@ export default function WorkIndex(initialData) {
       <NextSeo title="Work" />
 
       <Header />
+      
+      <LocomotiveScrollProvider options={{ smooth: true, lerp: 0.075 }} watch={[]} containerRef={containerRef}>
+        <div data-scroll-container ref={containerRef} id="scroll-container">
+          <LazyMotion features={domAnimation}>
+            
+            <m.div
+              initial="initial"
+              animate="enter"
+              exit="exit"
+              className="py-32 lg:py-40 bg-white"
+            >
+              
+                <m.div variants={fade}>
 
-      <LazyMotion features={domAnimation}>
-        
-        <m.div
-          initial="initial"
-          animate="enter"
-          exit="exit"
-          className="py-32 lg:py-40 bg-white"
-        >
-          
-            <m.div variants={fade}>
+                  <Container>
 
-              <Container>
+                    <div className="overflow-hidden relative mb-5">
+                      <m.h1 variants={reveal} className="text-left text-2xl lg:text-4xl 2xl:text-5xl leading-tight lg:leading-tight xl:leading-tight mb-0 lg:mb-0 2xl:mb-0">Selected Work</m.h1>
+                    </div>
 
-                <div className="overflow-hidden relative mb-5">
-                  <m.h1 variants={reveal} className="text-center text-2xl lg:text-4xl 2xl:text-5xl leading-tight lg:leading-tight xl:leading-tight mb-0 lg:mb-0 2xl:mb-0">Selected Work</m.h1>
-                </div>
-
-                <ul className="flex flex-wrap justify-center max-w-3xl mx-auto">
+                    <ul className="flex flex-wrap justify-start max-w-3xl">
+                      {categories.map((cat, i) => {
+                        return cat.relatedWork.length > 0 && (
+                          <li className=" pl-0 ml-0" id={i} key={i}>
+                            <ScrollToButton scrollTarget={`#${cat.slug.current}`}>
+                              <div className="overflow-hidden relative">
+                                <m.div variants={reveal}>
+                                  {cat.title}
+                                </m.div>
+                              </div>
+                            </ScrollToButton>
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  </Container>        
+                  
                   {categories.map((cat, i) => {
                     return cat.relatedWork.length > 0 && (
-                      <li className="w-1/2 sm:w-1/3 md:w-1/5" id={i} key={i}>
-                        <a className="block px-4 py-2 text-center uppercase cursor-pointer text-blue" data-target={cat.slug.current} href={`#${cat.slug.current}`}>
-                          <div className="overflow-hidden relative">
-                            <m.div variants={reveal}>
-                              {cat.title}
-                            </m.div>
-                          </div>
-                        </a>
-                      </li>
+                      <div className="">
+                        <Carousel
+                          id={cat.slug.current}
+                          title={cat.title}
+                          items={cat.relatedWork}
+                          key={i}
+                        />
+                      </div>
                     )
                   })}
-                </ul>
-              </Container>        
+                </m.div>
               
-              {categories.map((cat, i) => {
-                return cat.relatedWork.length > 0 && (
-                  <Carousel
-                    id={cat.slug.current}
-                    title={cat.title}
-                    items={cat.relatedWork}
-                    key={i}
-                  />
-                )
-              })}
             </m.div>
+            
+          </LazyMotion>
+        </div>
+      </LocomotiveScrollProvider>
           
-        </m.div>
-        
-      </LazyMotion>
-      
     </Layout>
   )
 }

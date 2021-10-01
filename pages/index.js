@@ -34,7 +34,7 @@ export default function Home(initialData) {
     <Layout>
       <NextSeo title={home.title} />
 
-      <Header logoWhite menuWhite />
+      <Header />
       
       <LazyMotion features={domAnimation}>
         

@@ -3,10 +3,12 @@ import Header from '@/components/header'
 import { fade, reveal, imageScale } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import SanityPageService from '@/services/sanityPageService'
 import { useState } from 'react'
+import ImageWrapper from '@/components/image-wrapper'
 
 const query = `{
   "contact": *[_type == "contact"][0]{
@@ -61,41 +63,84 @@ export default function Menu(initialData) {
                   
                   <div className="relative w-full min-h-[40vh] lg:min-h-screen lg:w-1/2 lg:fixed lg:top-0 lg:right-0 bg-gray-100 overflow-hidden">
                     <m.div variants={imageScale}  className="absolute inset-0">
-                      <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="/images/menu.jpeg" alt="A woman stood next to a vase in a multicoloured dress" />
+                      {/* <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={contact.homeMenuImage.asset.url} /> */}
+                      
+                      <Image
+                        src={contact.homeMenuImage.asset.url}
+                        layout="fill"
+                        className={`absolute object-cover object-top w-full h-full`}
+                        priority
+                      />
 
                       {contact.homeMenuImage && (
                         <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 'home' ? 'opacity-100' : 'opacity-0' }`}>
-                          <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={contact.homeMenuImage.asset.url} alt="" />
+                          <ImageWrapper
+                            image={contact.homeMenuImage.asset}
+                            className="absolute object-cover object-top w-full h-full"
+                            baseWidth={1200}
+                            baseHeight={1600}
+                            fill
+                          />
                         </div>
                       )}
                       
                       {contact.aboutMenuImage && (
                         <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 'about' ? 'opacity-100' : 'opacity-0' }`}>
-                          <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={contact.aboutMenuImage.asset.url} alt="" />
+                          <ImageWrapper
+                            image={contact.aboutMenuImage.asset}
+                            className="absolute object-cover object-top w-full h-full"
+                            baseWidth={1200}
+                            baseHeight={1600}
+                            fill
+                          />
                         </div>
                       )}
 
                       {contact.workMenuImage && (
                         <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 'work' ? 'opacity-100' : 'opacity-0' }`}>
-                          <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={contact.workMenuImage.asset.url} alt="" />
+                          <ImageWrapper
+                            image={contact.workMenuImage.asset}
+                            className="absolute object-cover object-top w-full h-full"
+                            baseWidth={1200}
+                            baseHeight={1600}
+                            fill
+                          />
                         </div>
                       )}
 
                       {contact.clientsMenuImage && (
                         <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 'clients' ? 'opacity-100' : 'opacity-0' }`}>
-                          <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={contact.clientsMenuImage.asset.url} alt="" />
+                          <ImageWrapper
+                            image={contact.clientsMenuImage.asset}
+                            className="absolute object-cover object-top w-full h-full"
+                            baseWidth={1200}
+                            baseHeight={1600}
+                            fill
+                          />
                         </div>
                       )}
 
                       {contact.digitalShowroomMenuImage && (
                         <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 'digital-showroom' ? 'opacity-100' : 'opacity-0' }`}>
-                          <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={contact.digitalShowroomMenuImage.asset.url} alt="" />
+                          <ImageWrapper
+                            image={contact.digitalShowroomMenuImage.asset}
+                            className="absolute object-cover object-top w-full h-full"
+                            baseWidth={1200}
+                            baseHeight={1600}
+                            fill
+                          />
                         </div>
                       )}
 
                       {contact.contactMenuImage && (
                         <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 'contact' ? 'opacity-100' : 'opacity-0' }`}>
-                          <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={contact.contactMenuImage.asset.url} alt="" />
+                          <ImageWrapper
+                            image={contact.contactMenuImage.asset}
+                            className="absolute object-cover object-top w-full h-full"
+                            baseWidth={1200}
+                            baseHeight={1600}
+                            fill
+                          />
                         </div>
                       )}
                     </m.div>
