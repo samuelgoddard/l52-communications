@@ -9,6 +9,17 @@ import SanityPageService from '@/services/sanityPageService'
 import { useState } from 'react'
 import ImageWrapper from '@/components/image-wrapper'
 
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from 'react-accessible-accordion';
+
+// import 'react-accessible-accordion/dist/fancy-example.css';
+
+
 const query = `{
   "about": *[_type == "about"][0]{
     title,
@@ -160,26 +171,34 @@ export default function About(initialData) {
                           enter: { transition: { staggerChildren: 0.04 } }
                         }}
                       >
-                      <dl>
+                        <Accordion allowZeroExpanded>
                         {about.services.map((service, i) => {
                           return (
-                            <div key={i}>
-                              <dt id={`service-${i}`} className="2xl:text-[1.1rem]">
-                                <a href={`#service-${i}`} onClick={() => setCurrentImage(i + 1)}>
-                                  <div className="overflow-hidden relative">
-                                    <m.div variants={reveal}>{service.title}</m.div>
+                            <AccordionItem key={i}>
+                              <AccordionItemHeading>
+                                  <AccordionItemButton>
+                                  <div id={`service-${i}`} className="2xl:text-[1.1rem]">
+                                    <a href={`#service-${i}`} onClick={() => setCurrentImage(i + 1)}>
+                                      <div className="overflow-hidden relative flex">
+                                        <m.div variants={reveal}>{service.title}</m.div>
+                                        <m.div vatiants={reveal} className="ml-auto mt-[-1px]">
+                                          <span className="cross">+</span>
+                                          <span className="minus hidden">-</span>
+                                        </m.div>
+                                      </div>
+                                    </a>
                                   </div>
-                                </a>
-                              </dt>
-                              <dd>
-                                <div className="content w-11/12 lg:w-11/12 text-off-black 2xl:text-[1.02rem]">
+                                  </AccordionItemButton>
+                              </AccordionItemHeading>
+                              <AccordionItemPanel>
+                                <div className="content w-11/12 lg:w-11/12 text-off-black 2xl:text-[1.02rem] py-3">
                                   <BlockContent serializers={{ container: ({ children }) => children }} blocks={service.text} />
                                 </div>
-                              </dd>
-                            </div>
+                              </AccordionItemPanel>
+                          </AccordionItem>
                           )
                         })}
-                      </dl>
+                        </Accordion>
                       </m.div>
                     </div>
                   </div>

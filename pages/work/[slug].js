@@ -123,7 +123,7 @@ export default function WorkSlug(initialData) {
                         <div className="w-full text-center sm:my-0 sm:w-1/3">
                             {client && (
                               <div className="overflow-hidden relative mb-[0.5rem]">
-                                <m.h1 variants={reveal} className="text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-display text-black mb-0 pb-0">{client}</m.h1>
+                                <m.h1 variants={reveal} className="text-xl font-sans text-black mb-0 pb-0">{client}</m.h1>
                               </div>
                             )}
                             <div className="relative overflow-hidden">

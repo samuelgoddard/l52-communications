@@ -146,3 +146,66 @@ dd {
 .react-tabs__tab--selected {
   @apply text-blue opacity-100;
 }
+
+.accordion__panel {
+  display: block !important;
+  overflow: hidden;
+  max-height: 1000px;  
+  transition: max-height 1.5s ease-in-out;
+}
+
+.accordion__panel[hidden] {
+  display: block !important;
+  max-height: 0;
+  overflow: hidden;  
+  transition: max-height 0.75s cubic-bezier(0, 1, 0, 1);
+}
+
+.accordion__button {
+  @apply transition-all ease-in-out duration-[600ms] border-b border-gray-200 py-3 uppercase;
+}
+
+.accordion__button[aria-expanded='true'] {
+  @apply h-auto border-b; 
+
+  .cross {
+    @apply hidden;
+  }
+  .minus {
+    @apply block;
+  }
+}
+
+@keyframes fadein {
+  0% {
+      max-height: 0;
+      opacity: 0;
+  }
+
+  100% {
+      max-height: 600px;
+      opacity: 1;
+  }
+}
+
+.react-tabs__tab-panel {
+  opacity: 0;
+  display: block !important;
+  @apply transition-opacity ease-in-out duration-1000;
+}
+
+.react-tabs__tab-panel--selected {
+  opacity: 1;
+  display: block !important;
+  @apply transition-opacity ease-in-out duration-1000;
+}
+/* 
+@keyframes fadein {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+} */

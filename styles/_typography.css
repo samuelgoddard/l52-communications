@@ -8,6 +8,14 @@
     @apply underline hover:text-opacity-25 focus:text-opacity-25;
   }
 
+  & > ul > li {
+    @apply leading-relaxed;
+    &:before {
+      content: '-';
+      margin-right: 8px;
+    }
+  }
+
   & > h1, & > .h1 {
     @apply text-3xl md:text-4xl;
   }
