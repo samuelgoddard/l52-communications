@@ -95,7 +95,12 @@ export default function WorkIndex(initialData) {
                             <ScrollToButton scrollTarget={`#${cat.slug.current}`}>
                               <div className="overflow-hidden relative">
                                 <m.div variants={reveal}>
-                                  {cat.title}
+                                  <span className="block overflow-hidden relative">
+                                    <m.span variants={fade} className="block">
+                                      <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">{cat.title}</span>
+                                      <span className="absolute inset-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">{cat.title}</span>
+                                    </m.span>
+                                  </span>
                                 </m.div>
                               </div>
                             </ScrollToButton>

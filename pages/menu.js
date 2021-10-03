@@ -231,8 +231,11 @@ export default function Menu(initialData) {
                     </nav>
 
                     {contact.instagram && (
-                      <a aria-label="Go to our Instagram page" className="block mt-8 lg:mt-12 mb-0 font-sans uppercase text-blue" href={contact.instagram} target="_blank" rel="noopener noreferrer">
-                        Instagram
+                      <a aria-label="Go to our Instagram page" className="block mt-8 lg:mt-12 mb-0 font-sans uppercase group text-blue group" href={contact.instagram} target="_blank" rel="noopener noreferrer">
+                        <span className="block overflow-hidden relative">
+                              <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Instagram</span>
+                              <span className="absolute inset-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full ">Instagram</span>
+                          </span>
                       </a>
                     )}
                     

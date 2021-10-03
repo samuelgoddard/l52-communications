@@ -42,19 +42,25 @@ export default function Clients(initialData) {
                   <Tabs>
                     <TabList className="flex flex-wrap justify-center mb-8">
                       <Tab>
-                        <button className="p-2 text-2xl lg:text-[32px] xs:p-4 font-display">
+                        <button className="p-2 text-2xl lg:text-[32px] xs:p-4 font-display group">
                           <div className="overflow-hidden">
                             <m.div variants={reveal}>
-                              Clients
+                            <span className="block overflow-hidden relative">
+                                <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Clients</span>
+                                <span className="absolute inset-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full ">Clients</span>
+                            </span>
                             </m.div>
                           </div>
                         </button>
                       </Tab>
                       <Tab>
-                        <button className="p-2 text-2xl lg:text-[32px] xs:p-4 font-display">
+                        <button className="p-2 text-2xl lg:text-[32px] xs:p-4 font-display group">
                           <div className="overflow-hidden">
                             <m.div variants={reveal}>
-                            Recent Projects
+                              <span className="block overflow-hidden relative">
+                                <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Recent Projects</span>
+                                <span className="absolute inset-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full ">Recent Projects</span>
+                            </span>
                             </m.div>
                           </div>
                         </button>

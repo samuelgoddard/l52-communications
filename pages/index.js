@@ -55,7 +55,7 @@ export default function Home(initialData) {
               )}
               {home.backgroundVideo && (
                 <div className="absolute inset-0 z-0">
-                  <video loop autoPlay muted className="w-full h-full object-center object-cover">
+                  <video playsInline loop={true} autoPlay="autoplay" muted className="w-full h-full object-center object-cover">
                     <source src={home.backgroundVideo.asset.url} type="video/mp4"/>
                     Your browser does not support the video tag.
                   </video>
@@ -72,8 +72,11 @@ export default function Home(initialData) {
                     <Link href="/about">
                       <div className="relative overflow-hidden">
                         <m.div variants={reveal}>
-                          <a className="w-1/2 md:w-auto text-white text-center mix-blend-difference cursor-pointer 2xl:text-[1.1rem]">
-                            About
+                          <a className="w-1/2 md:w-auto text-white text-center mix-blend-difference cursor-pointer 2xl:text-[1.1rem] group">
+                          <span className="block overflow-hidden relative">
+                              <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">About</span>
+                              <span className="absolute inset-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full ">About</span>
+                          </span>
                           </a>
                         </m.div>
                       </div>
@@ -82,8 +85,11 @@ export default function Home(initialData) {
                     <Link href="/work">
                       <div className="relative overflow-hidden">
                         <m.div variants={reveal}>
-                          <a className="w-1/2 md:w-auto text-white text-center mix-blend-difference cursor-pointer 2xl:text-[1.1rem]">
-                            Work
+                          <a className="w-1/2 md:w-auto text-white text-center mix-blend-difference cursor-pointer 2xl:text-[1.1rem] group">
+                          <span className="block overflow-hidden relative">
+                              <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Work</span>
+                              <span className="absolute inset-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full ">Work</span>
+                          </span>
                           </a>
                         </m.div>
                       </div>
@@ -92,8 +98,11 @@ export default function Home(initialData) {
                     <Link href="/clients">
                       <div className="relative overflow-hidden">
                         <m.div variants={reveal}>
-                          <a className="w-1/2 md:w-auto text-white text-center mix-blend-difference cursor-pointer 2xl:text-[1.1rem]">
-                            Clients
+                          <a className="w-1/2 md:w-auto text-white text-center mix-blend-difference cursor-pointer 2xl:text-[1.1rem] group">
+                          <span className="block overflow-hidden relative">
+                              <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Clients</span>
+                              <span className="absolute inset-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full ">Clients</span>
+                          </span>
                           </a>
                         </m.div>
                       </div>
@@ -101,8 +110,11 @@ export default function Home(initialData) {
 
                     <div className="relative overflow-hidden">
                       <m.div variants={reveal}>
-                        <a href="https://digitalshowroom.l52.world/" target="_blank" rel="noopener noreferrer" className="w-1/2 md:w-auto text-white text-center mix-blend-difference cursor-pointer 2xl:text-[1.1rem]">
-                          Digital Showroom
+                        <a href="https://digitalshowroom.l52.world/" target="_blank" rel="noopener noreferrer" className="w-1/2 md:w-auto text-white text-center mix-blend-difference cursor-pointer 2xl:text-[1.1rem] group">
+                        <span className="block overflow-hidden relative">
+                              <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Digital Showroom</span>
+                              <span className="absolute inset-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full ">Digital Showroom</span>
+                          </span>
                         </a>
                       </m.div>
                     </div>
@@ -110,8 +122,12 @@ export default function Home(initialData) {
                     <Link href="/contact">
                       <div className="relative overflow-hidden">
                         <m.div variants={reveal}>
-                          <a className="w-1/2 md:w-auto text-white text-center mix-blend-difference cursor-pointer 2xl:text-[1.1rem]">
-                            Contact
+                          <a className="w-1/2 md:w-auto text-white text-center mix-blend-difference cursor-pointer 2xl:text-[1.1rem] group">
+                            
+                          <span className="block overflow-hidden relative">
+                              <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Contact</span>
+                              <span className="absolute inset-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full ">Contact</span>
+                          </span>
                           </a>
                         </m.div>
                       </div>

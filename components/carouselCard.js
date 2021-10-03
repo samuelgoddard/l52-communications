@@ -26,9 +26,15 @@ export default function CarouselCard({ image, title, detail, link, index }) {
                                 <m.span variants={reveal} className="block uppercase text-blue">{title}</m.span>
                             </div>
                             <div className="overflow-hidden relative">
-                                <m.span variants={reveal} className="text-off-black group-hover:hidden block">{detail}</m.span>
+                                <m.span variants={reveal} className="block">
+                                <span className="block overflow-hidden relative">
+                                      <span className="text-off-black block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">{detail}</span>
+                                      <span className="absolute inset-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-[90%] underline">View More</span>
+                                    
+                                  </span>
+                                  </m.span>
                             </div>
-                            <span className="hidden underline group-hover:block">View More</span>
+                            {/* <span className="hidden underline group-hover:block">View More</span> */}
                         </div>
                     </a>
                 </Link>

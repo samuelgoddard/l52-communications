@@ -34,7 +34,12 @@ export default function Header({ logoWhite, menuWhite, isMenu, logoBlack, menuBl
 
           <nav>
             {isMenu ? (
-              <button className="uppercase text-white mix-blend-difference 2xl:text-[1.1rem] hover:outline-none focus:outline-none" onClick={() => router.back()}>Close</button>
+              <button className="uppercase text-white mix-blend-difference 2xl:text-[1.1rem] hover:outline-none focus:outline-none group" onClick={() => router.back()}>
+                <span className="block overflow-hidden relative">
+                    <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Close</span>
+                    <span className="absolute inset-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full underline">Close</span>
+                </span>
+              </button>
             ) : (
               <FancyLink destination={`/menu`} a11yText={`Open Menu`} label={'Menu'} extraClasses={`uppercase text-white mix-blend-difference 2xl:text-[1.1rem]`}/>  
             )}
