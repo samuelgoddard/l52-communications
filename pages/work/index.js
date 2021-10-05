@@ -69,8 +69,8 @@ export default function WorkIndex(initialData) {
 
       <Header />
       
-      <LocomotiveScrollProvider options={{ smooth: true, lerp: 0.075 }} watch={[]} containerRef={containerRef}>
-        <div data-scroll-container ref={containerRef} id="scroll-container">
+      {/* <LocomotiveScrollProvider options={{ smooth: true, lerp: 0.075 }} watch={[]} containerRef={containerRef}>
+        <div data-scroll-container ref={containerRef} id="scroll-container"> */}
           <LazyMotion features={domAnimation}>
             
             <m.div
@@ -127,8 +127,8 @@ export default function WorkIndex(initialData) {
             </m.div>
             
           </LazyMotion>
-        </div>
-      </LocomotiveScrollProvider>
+        {/* </div>
+      </LocomotiveScrollProvider> */}
           
     </Layout>
   )
