@@ -9,6 +9,7 @@ import { useEmblaCarousel } from 'embla-carousel/react'
 import { PrevButton, NextButton, DotButton } from "@/components/carouselButtons";
 import Link from 'next/link'
 import SanityPageService from '@/services/sanityPageService'
+import { setupWheelGestures } from "embla-carousel-wheel-gestures";
 
 const query = `*[_type == "work" && slug.current == $slug][0]{
   title,
@@ -53,6 +54,7 @@ export default function WorkSlug(initialData) {
     setSelectedIndex(embla.selectedScrollSnap());
     setPrevBtnEnabled(embla.canScrollPrev());
     setNextBtnEnabled(embla.canScrollNext());
+    embla && setupWheelGestures(embla)
   }, [embla, setSelectedIndex]);
 
   useEffect(() => {
