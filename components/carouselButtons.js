@@ -17,3 +17,11 @@ export const NextButton = ({ enabled, onClick }) => (
     <span className="block mt-[-2px]">→</span>
   </button>
 );
+
+export const DotButton = ({ selected, onClick }) => (
+  <button
+    className={`embla__dot ${selected ? "is-selected" : ""}`}
+    type="button"
+    onClick={onClick}
+  />
+);

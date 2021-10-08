@@ -6,7 +6,7 @@ import { fade, reveal } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import { useEmblaCarousel } from 'embla-carousel/react'
-import { PrevButton, NextButton } from "@/components/carouselButtons";
+import { PrevButton, NextButton, DotButton } from "@/components/carouselButtons";
 import Link from 'next/link'
 import SanityPageService from '@/services/sanityPageService'
 
@@ -66,7 +66,7 @@ export default function WorkSlug(initialData) {
     <Layout>
       <NextSeo title={title} />
 
-      <Header />
+      <Header isClose />
 
       <LazyMotion features={domAnimation}>
         <div className="flex flex-wrap items-center justify-center min-h-screen">
@@ -81,7 +81,7 @@ export default function WorkSlug(initialData) {
 
                 <Container>
 
-                  <div className="relative px-8 lg:px-20">
+                  <div className="relative">
 
                     <div className="embla mt-[-5vh]">
                       <div className="embla__viewport" ref={viewportRef}>
@@ -101,6 +101,18 @@ export default function WorkSlug(initialData) {
                       </div>
                       <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
                       <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
+                      
+                      <div className="mt-[25px]">
+                        <div className="embla__dots">
+                          {scrollSnaps.map((_, index) => (
+                            <DotButton
+                              key={index}
+                              selected={index === selectedIndex}
+                              onClick={() => scrollTo(index)}
+                            />
+                          ))}
+                        </div>
+                      </div>
                     </div>   
 
                   </div>      

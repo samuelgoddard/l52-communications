@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 
-export default function Header({ logoWhite, menuWhite, isMenu, logoBlack, menuBlack }) {
+export default function Header({ logoWhite, menuWhite, isMenu, logoBlack, menuBlack, isClose }) {
   let logoColorTheme = ''
   let menuColorTheme = ''
 
@@ -33,15 +33,27 @@ export default function Header({ logoWhite, menuWhite, isMenu, logoBlack, menuBl
           </Link>
 
           <nav>
-            {isMenu ? (
-              <button className="uppercase text-white mix-blend-difference 2xl:text-[1.1rem] hover:outline-none focus:outline-none group" onClick={() => router.back()}>
+            {isClose ? (
+              <button className="uppercase 2xl:text-[1.1rem]  group block relative z-10 duration-[450ms] border border-white border-opacity-20 p-2 hover:border-opacity-100" onClick={() => router.back()}>
                 <span className="block overflow-hidden relative">
-                    <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Close</span>
-                    <span className="absolute inset-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full underline">Close</span>
+                    <span>
+                      <svg className="block w-3 " xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 378.303 378.303"><path fill="currentColor" d="M378.303 28.285 350.018 0 189.151 160.867 28.285 0 0 28.285l160.867 160.866L0 350.018l28.285 28.284 160.866-160.866 160.867 160.866 28.285-28.284-160.867-160.867z"/></svg>
+                    </span>
                 </span>
               </button>
             ) : (
-              <FancyLink destination={`/menu`} a11yText={`Open Menu`} label={'Menu'} extraClasses={`uppercase text-white mix-blend-difference 2xl:text-[1.1rem]`}/>  
+              <>
+              {isMenu ? (
+                <button className="uppercase text-white mix-blend-difference 2xl:text-[1.1rem] hover:outline-none focus:outline-none group" onClick={() => router.back()}>
+                  <span className="block overflow-hidden relative">
+                      <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Close</span>
+                      <span className="absolute inset-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full underline">Close</span>
+                  </span>
+                </button>
+              ) : (
+                <FancyLink destination={`/menu`} a11yText={`Open Menu`} label={'Menu'} extraClasses={`uppercase text-white mix-blend-difference 2xl:text-[1.1rem]`}/>  
+              )}
+              </>
             )}
             
           </nav>
