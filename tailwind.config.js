@@ -1,6 +1,15 @@
 module.exports = {
   mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: {
+    content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+    safelist: [
+      'embla',
+      'embla__viewport',
+      'embla__container',
+      'embla__slide',
+      'embla__container'
+    ]
+  },
   darkMode: false,
   theme: {
     fontFamily: {

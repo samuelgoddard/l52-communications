@@ -4,6 +4,8 @@ import CarouselCard from '@/components/carouselCard';
 import { fade, reveal, imageScale } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import Container from './container';
+import { setupWheelGestures } from 'embla-carousel-wheel-gestures'
+
 
 export default function Carousel({ title, items, id }) {
 
@@ -32,6 +34,9 @@ export default function Carousel({ title, items, id }) {
         setScrollSnaps(embla.scrollSnapList());
         embla.on("select", onSelect);
       }, [embla, setScrollSnaps, onSelect]);
+
+      setupWheelGestures(embla)
+
 
     return (
 
