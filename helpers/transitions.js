@@ -38,7 +38,7 @@ export const revealDelay2 = {
 	initial: { y: '100%' },
   enter: { 
     y: 0,
-    transition: { duration: 0.7, delay: 0.2, ease: [0.83, 0, 0.17, 1] }
+    transition: { duration: 0.7, delay: 0.15, ease: [0.83, 0, 0.17, 1] }
   },
 	exit: {
     y: '100%',
@@ -50,7 +50,7 @@ export const revealDelay3 = {
 	initial: { y: '100%' },
   enter: { 
     y: 0,
-    transition: { duration: 0.7, delay: 0.3, ease: [0.83, 0, 0.17, 1] }
+    transition: { duration: 0.7, delay: 0.2, ease: [0.83, 0, 0.17, 1] }
   },
 	exit: {
     y: '100%',
