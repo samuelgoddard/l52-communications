@@ -32,7 +32,7 @@ const query = `{
     _id,
     _type,
     title,
-    "relatedWork": *[_type == "work" && references(^._id)] | order(title) {
+    "relatedWork": *[_type == "work" && references(^._id)] {
       title,
       client,
       date,
