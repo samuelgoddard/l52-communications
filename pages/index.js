@@ -82,7 +82,7 @@ export default function Home(initialData) {
                 </h1>
               </div>
               
-              <div className="w-full self-end pb-[32px] lg:pb-[64px] relative z-10 mix-blend-difference">
+              <div className="w-full self-end pb-[32px] lg:pb-[64px] relative z-10 mix-blend-difference px-8 md:px-0 justify-center">
                 <Container>
                   <div className="flex flex-wrap items-center justify-between w-full text-sm uppercase mix-blend-difference">
                     <Link href="/about">
