@@ -33,10 +33,8 @@ export default function Carousel({ title, items, id }) {
         onSelect();
         setScrollSnaps(embla.scrollSnapList());
         embla.on("select", onSelect);
+        embla && setupWheelGestures(embla)
       }, [embla, setScrollSnaps, onSelect]);
-
-      setupWheelGestures(embla)
-
 
     return (
 
