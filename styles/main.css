@@ -187,6 +187,7 @@ dd {
   width: 100%;
   height: 1px;
   content: "";
+  @apply transition-all ease-in-out duration-500;
 }
 
 .embla__dot.is-selected:after {
