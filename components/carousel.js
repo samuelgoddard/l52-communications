@@ -51,7 +51,7 @@ export default function Carousel({ title, items, id }) {
                                     onClick={scrollPrev}
                                     disabled={!prevBtnEnabled}
                                 >
-                                    &larr;
+                                    <svg className="w-4 rotate-180" viewBox="0 0 15 7" xmlns="http://www.w3.org/2000/svg"><path d="m11.552 6.144 3.296-2.784L11.552.592v2.352H.352v.848h11.2z" fill="#00206E" fill-rule="nonzero"/></svg>
                                 </button>
 
                                 <button
@@ -59,7 +59,7 @@ export default function Carousel({ title, items, id }) {
                                     onClick={scrollNext}
                                     disabled={!nextBtnEnabled}
                                 >
-                                    &rarr;
+                                    <svg className="w-4" viewBox="0 0 15 7" xmlns="http://www.w3.org/2000/svg"><path d="m11.552 6.144 3.296-2.784L11.552.592v2.352H.352v.848h11.2z" fill="#00206E" fill-rule="nonzero"/></svg>
                                 </button>
                             </div>
                         </div>

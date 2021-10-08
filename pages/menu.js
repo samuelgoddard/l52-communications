@@ -167,8 +167,8 @@ export default function Menu(initialData) {
                               </m.div>
                             </div>
 
-                            <div className="absolute top-0 right-0 mt-2 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case rotate-[25deg] opacity-50 overflow-hidden text-black">
-                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-1 transition-transform ease-in-out duration-500">↑</span>
+                            <div className="absolute top-0 right-0 mt-4 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case overflow-hidden text-black">
+                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-0 transition-transform ease-in-out duration-500 normal-case"><svg className="w-[15px]" viewBox="0 0 9 8" xmlns="http://www.w3.org/2000/svg"><path d="M5.268.478 8.461.184l-.414 3.171-1.178-1.219L.756 8.04l-.424-.439 6.113-5.904z" fill="#8F8F8F" fill-rule="nonzero"/></svg></span>
                             </div>
                           </a>
                           </Link>
@@ -183,8 +183,8 @@ export default function Menu(initialData) {
                               </m.div>
                             </div>
                             
-                            <div className="absolute top-0 right-0 mt-2 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case rotate-[25deg] opacity-50 overflow-hidden text-black">
-                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-1 transition-transform ease-in-out duration-500">↑</span>
+                            <div className="absolute top-0 right-0 mt-4 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case overflow-hidden text-black">
+                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-0 transition-transform ease-in-out duration-500 normal-case"><svg className="w-[15px]" viewBox="0 0 9 8" xmlns="http://www.w3.org/2000/svg"><path d="M5.268.478 8.461.184l-.414 3.171-1.178-1.219L.756 8.04l-.424-.439 6.113-5.904z" fill="#8F8F8F" fill-rule="nonzero"/></svg></span>
                             </div>
                           </a>
                           </Link>
@@ -199,8 +199,8 @@ export default function Menu(initialData) {
                               </m.div>
                             </div>
 
-                            <div className="absolute top-0 right-0 mt-2 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case rotate-[25deg] opacity-50 overflow-hidden text-black">
-                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-1 transition-transform ease-in-out duration-500">↑</span>
+                            <div className="absolute top-0 right-0 mt-4 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case overflow-hidden text-black">
+                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-0 transition-transform ease-in-out duration-500 normal-case"><svg className="w-[15px]" viewBox="0 0 9 8" xmlns="http://www.w3.org/2000/svg"><path d="M5.268.478 8.461.184l-.414 3.171-1.178-1.219L.756 8.04l-.424-.439 6.113-5.904z" fill="#8F8F8F" fill-rule="nonzero"/></svg></span>
                             </div>
                           </a>
                           </Link>
@@ -215,8 +215,8 @@ export default function Menu(initialData) {
                               </m.div>
                             </div>
 
-                            <div className="absolute top-0 right-0 mt-2 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case rotate-[25deg] opacity-50 overflow-hidden text-black">
-                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-1 transition-transform ease-in-out duration-500">↑</span>
+                            <div className="absolute top-0 right-0 mt-4 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case overflow-hidden text-black">
+                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-0 transition-transform ease-in-out duration-500 normal-case"><svg className="w-[15px]" viewBox="0 0 9 8" xmlns="http://www.w3.org/2000/svg"><path d="M5.268.478 8.461.184l-.414 3.171-1.178-1.219L.756 8.04l-.424-.439 6.113-5.904z" fill="#8F8F8F" fill-rule="nonzero"/></svg></span>
                             </div>
                           </a>
                           </Link>
@@ -230,8 +230,8 @@ export default function Menu(initialData) {
                               </m.div>
                             </div>
 
-                            <div className="absolute top-0 right-0 mt-2 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case rotate-[25deg] opacity-50 overflow-hidden text-black">
-                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-1 transition-transform ease-in-out duration-500">↑</span>
+                            <div className="absolute top-0 right-0 mt-4 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case overflow-hidden text-black">
+                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-0 transition-transform ease-in-out duration-500 normal-case"><svg className="w-[15px]" viewBox="0 0 9 8" xmlns="http://www.w3.org/2000/svg"><path d="M5.268.478 8.461.184l-.414 3.171-1.178-1.219L.756 8.04l-.424-.439 6.113-5.904z" fill="#8F8F8F" fill-rule="nonzero"/></svg></span>
                             </div>
                           </a>
                         </li>
@@ -245,8 +245,8 @@ export default function Menu(initialData) {
                               </m.div>
                             </div>
 
-                            <div className="absolute top-0 right-0 mt-2 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case rotate-[25deg] opacity-50 overflow-hidden text-black">
-                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-1 transition-transform ease-in-out duration-500">↑</span>
+                            <div className="absolute top-0 right-0 mt-4 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case overflow-hidden text-black">
+                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-0 transition-transform ease-in-out duration-500 normal-case"><svg className="w-[15px]" viewBox="0 0 9 8" xmlns="http://www.w3.org/2000/svg"><path d="M5.268.478 8.461.184l-.414 3.171-1.178-1.219L.756 8.04l-.424-.439 6.113-5.904z" fill="#8F8F8F" fill-rule="nonzero"/></svg></span>
                             </div>
                           </a>
                           </Link>
