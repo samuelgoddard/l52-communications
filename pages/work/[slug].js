@@ -124,7 +124,7 @@ export default function WorkSlug(initialData) {
                       <div className="flex flex-wrap items-end justify-center">
                         <div className="w-full text-center sm:my-0 sm:w-1/3 sm:text-left">
                           <Link href="/work">
-                            <a className="uppercase text-blue border border-black border-opacity-20 hover:border-opacity-100 transition-all ease-in-out duration-500 px-4 py-1 hidden md:inline-block">
+                            <a className="uppercase text-blue border border-black hover:border-blue border-opacity-20 hover:border-opacity-100 transition-all ease-in-out duration-500 px-4 py-1 hidden md:inline-block">
                               <div className="overflow-hidden relative">
                                 <m.div variants={reveal}>
                                   ← All Projects

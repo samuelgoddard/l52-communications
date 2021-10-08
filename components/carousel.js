@@ -47,7 +47,7 @@ export default function Carousel({ title, items, id }) {
                             
                             <div className="flex ml-auto">
                                 <button
-                                    className="mr-2 lg:mr-3 text-base text-blue border-black border border-opacity-20 w-[30px] lg:w-[35px] h-[30px] lg:h-[35px] flex items-center justify-center hover:border-opacity-100 transition-all ease-in-out duration-500"
+                                    className="mr-2 lg:mr-3 text-base text-blue border-black hover:border-blue border border-opacity-20 w-[30px] lg:w-[35px] h-[30px] lg:h-[35px] flex items-center justify-center hover:border-opacity-100 transition-all ease-in-out duration-500"
                                     onClick={scrollPrev}
                                     disabled={!prevBtnEnabled}
                                 >
@@ -55,7 +55,7 @@ export default function Carousel({ title, items, id }) {
                                 </button>
 
                                 <button
-                                    className="text-base text-blue border-black border border-opacity-20 w-[30px] lg:w-[35px] h-[30px] lg:h-[35px] flex items-center justify-center hover:border-opacity-100 transition-all ease-in-out duration-500"
+                                    className="text-base text-blue border-black hover:border-blue border border-opacity-20 w-[30px] lg:w-[35px] h-[30px] lg:h-[35px] flex items-center justify-center hover:border-opacity-100 transition-all ease-in-out duration-500"
                                     onClick={scrollNext}
                                     disabled={!nextBtnEnabled}
                                 >

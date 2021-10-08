@@ -34,7 +34,7 @@ export default function Header({ logoWhite, menuWhite, isMenu, logoBlack, menuBl
 
           <nav>
             {isClose ? (
-              <button className="uppercase 2xl:text-[1.1rem]  group block relative z-10 duration-[450ms] border border-white border-opacity-20 p-2 hover:border-opacity-100" onClick={() => router.back()}>
+              <button className="uppercase 2xl:text-[1.1rem]  group block relative z-10 duration-[450ms] border border-white hover:border-[#F8FF81] border-opacity-20 p-2 mix-blend-normal hover:border-opacity-100" onClick={() => router.back()}>
                 <span className="block overflow-hidden relative">
                     <span>
                       <svg className="block w-3 " xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 378.303 378.303"><path fill="currentColor" d="M378.303 28.285 350.018 0 189.151 160.867 28.285 0 0 28.285l160.867 160.866L0 350.018l28.285 28.284 160.866-160.866 160.867 160.866 28.285-28.284-160.867-160.867z"/></svg>
