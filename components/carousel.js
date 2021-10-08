@@ -84,15 +84,16 @@ export default function Carousel({ title, items, id }) {
                             detailNone = 'View More'
                         }
                         return (
-                            <CarouselCard
-                                key={i}
-                                index={i}
-                                image={e.teaserImage.asset}
-                                title={e.client}
-                                detail={`${detailTitle} ${detailDate} ${detailNone}`}
-                                link={`/work/${e.slug.current}`}
-                                onClick={() => onSlideClick(i)}
-                            />        
+                            <div className="embla__slide" key={i}>
+                                <CarouselCard
+                                    index={i}
+                                    image={e.teaserImage.asset}
+                                    title={e.client}
+                                    detail={`${detailTitle} ${detailDate} ${detailNone}`}
+                                    link={`/work/${e.slug.current}`}
+                                    onClick={() => onSlideClick(i)}
+                                />        
+                            </div>
                         )
                     })}
                     {/* If items are less than 5, add a second fake loop to give the "infinite" effect */}
@@ -112,14 +113,15 @@ export default function Carousel({ title, items, id }) {
                             detailNone = 'View More'
                         }
                         return items.length < 5 && (
-                            <CarouselCard
-                                key={i}
-                                index={i}
-                                image={e.teaserImage.asset}
-                                title={e.client}
-                                detail={`${detailTitle} ${detailDate} ${detailNone}`}
-                                link={`/work/${e.slug.current}`}
-                            />        
+                            <div className="embla__slide" key={i}>
+                                <CarouselCard
+                                    index={i}
+                                    image={e.teaserImage.asset}
+                                    title={e.client}
+                                    detail={`${detailTitle} ${detailDate} ${detailNone}`}
+                                    link={`/work/${e.slug.current}`}
+                                />        
+                            </div>
                         )
                     })}
                   </div>

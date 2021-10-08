@@ -5,7 +5,6 @@ import ImageWrapper from './image-wrapper'
 
 export default function CarouselCard({ image, title, detail, link, index }) {
     return (
-        <div className="embla__slide">
             <div className="flex flex-wrap">
                 <div className="w-full" data-scroll data-scroll-direction="horizontal" data-scroll-speed={0.8}>
                     <Link href={link}>
@@ -41,6 +40,5 @@ export default function CarouselCard({ image, title, detail, link, index }) {
                     </Link>
                 </div>
             </div>
-        </div>
     )
 }

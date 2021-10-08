@@ -29,7 +29,7 @@
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^2.16.0",
     "@sanity/image-url": "^0.140.22",
-    "embla-carousel": "^4.5.3",
+    "embla-carousel": "^4.5.2",
     "framer-motion": "^4.1.17",
     "locomotive-scroll": "^4.1.2",
     "next": "^11.1.2",
