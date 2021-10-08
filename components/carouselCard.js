@@ -5,10 +5,9 @@ import ImageWrapper from './image-wrapper'
 
 export default function CarouselCard({ image, title, detail, link, index }) {
     return (
-            <div className="flex flex-wrap">
-                <div className="w-full" data-scroll data-scroll-direction="horizontal" data-scroll-speed={0.8}>
+
                     <Link href={link}>
-                        <a className="block overflow-hidden transition group w-full">
+                        <a className="flex flex-wrap group overflow-hidden group w-full">
                             <div className="w-full">
                                 <div className="overflow-hidden mb-4 relative">
                                     {/* <img className="w-full min-w-full transition-transform ease-in-out duration-[750ms] group-hover:scale-[1.05]" src={image} alt="" /> */}
@@ -38,7 +37,6 @@ export default function CarouselCard({ image, title, detail, link, index }) {
                             </div>
                         </a>
                     </Link>
-                </div>
-            </div>
+                
     )
 }

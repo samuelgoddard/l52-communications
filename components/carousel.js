@@ -7,11 +7,10 @@ import Container from './container';
 
 export default function Carousel({ title, items, id }) {
 
-    const [viewportRef, embla] = useEmblaCarousel({ loop: true, dragFree: true, slidesToScroll: 2, speed: 3, align: 0.045 });
+    const [viewportRef, embla] = useEmblaCarousel({ containScroll: "keepSnaps", loop: true, dragFree: true, slidesToScroll: 2, speed: 3, align: 0.045 });
 
     const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
     const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
-    const [selectedIndex, setSelectedIndex] = useState(0);
     const [scrollSnaps, setScrollSnaps] = useState([]);
 
     const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
@@ -22,10 +21,9 @@ export default function Carousel({ title, items, id }) {
 
     const onSelect = useCallback(() => {
         if (!embla) return;
-        setSelectedIndex(embla.selectedScrollSnap());
         setPrevBtnEnabled(embla.canScrollPrev());
         setNextBtnEnabled(embla.canScrollNext());
-    }, [embla, setSelectedIndex]);
+      }, [embla]);
 
 
     useEffect(() => {
@@ -65,7 +63,7 @@ export default function Carousel({ title, items, id }) {
                     </Container>
                 </div>
 
-                <div className={`embla`} >
+                <div className="embla">
                     <div className="embla__viewport" ref={viewportRef}>
                   <div className="embla__container">
                     {items.map((e, i) => {
@@ -85,6 +83,7 @@ export default function Carousel({ title, items, id }) {
                         }
                         return (
                             <div className="embla__slide" key={i}>
+                                <div className="embla__slide__inner">
                                 <CarouselCard
                                     index={i}
                                     image={e.teaserImage.asset}
@@ -92,7 +91,8 @@ export default function Carousel({ title, items, id }) {
                                     detail={`${detailTitle} ${detailDate} ${detailNone}`}
                                     link={`/work/${e.slug.current}`}
                                     onClick={() => onSlideClick(i)}
-                                />        
+                                />  
+                                </div>      
                             </div>
                         )
                     })}
@@ -114,13 +114,15 @@ export default function Carousel({ title, items, id }) {
                         }
                         return items.length < 5 && (
                             <div className="embla__slide" key={i}>
+                                <div className="embla__slide__inner">
                                 <CarouselCard
                                     index={i}
                                     image={e.teaserImage.asset}
                                     title={e.client}
                                     detail={`${detailTitle} ${detailDate} ${detailNone}`}
                                     link={`/work/${e.slug.current}`}
-                                />        
+                                />   
+                                </div>     
                             </div>
                         )
                     })}
