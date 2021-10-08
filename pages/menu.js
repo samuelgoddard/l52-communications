@@ -160,11 +160,15 @@ export default function Menu(initialData) {
                       <ul>
                         <li>
                           <Link href="/">
-                          <a aria-label="Go to Home" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue" onMouseOver={() => setCurrentImage('home')} onMouseLeave={() => setCurrentImage(null)}>
+                          <a aria-label="Go to Home" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue relative group" onMouseOver={() => setCurrentImage('home')} onMouseLeave={() => setCurrentImage(null)}>
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 Home
                               </m.div>
+                            </div>
+
+                            <div className="absolute top-0 right-0 mt-2 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case rotate-[25deg] opacity-50 overflow-hidden text-black">
+                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-1 transition-transform ease-in-out duration-500">↑</span>
                             </div>
                           </a>
                           </Link>
@@ -172,11 +176,15 @@ export default function Menu(initialData) {
 
                         <li>
                           <Link href="/about">
-                          <a aria-label="Go to about" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue" onMouseOver={() => setCurrentImage('about')} onMouseLeave={() => setCurrentImage(null)}>
+                          <a aria-label="Go to about" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue relative group relative group" onMouseOver={() => setCurrentImage('about')} onMouseLeave={() => setCurrentImage(null)}>
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 About Us
                               </m.div>
+                            </div>
+                            
+                            <div className="absolute top-0 right-0 mt-2 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case rotate-[25deg] opacity-50 overflow-hidden text-black">
+                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-1 transition-transform ease-in-out duration-500">↑</span>
                             </div>
                           </a>
                           </Link>
@@ -184,11 +192,15 @@ export default function Menu(initialData) {
 
                         <li>
                           <Link href="/work">
-                          <a aria-label="Go to about" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue" onMouseOver={() => setCurrentImage('work')} onMouseLeave={() => setCurrentImage(null)}>
+                          <a aria-label="Go to about" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue relative group" onMouseOver={() => setCurrentImage('work')} onMouseLeave={() => setCurrentImage(null)}>
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 Work
                               </m.div>
+                            </div>
+
+                            <div className="absolute top-0 right-0 mt-2 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case rotate-[25deg] opacity-50 overflow-hidden text-black">
+                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-1 transition-transform ease-in-out duration-500">↑</span>
                             </div>
                           </a>
                           </Link>
@@ -196,33 +208,45 @@ export default function Menu(initialData) {
 
                         <li>
                           <Link href="/clients">
-                          <a aria-label="Go to clients" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue" onMouseOver={() => setCurrentImage('clients')} onMouseLeave={() => setCurrentImage(null)}>
+                          <a aria-label="Go to clients" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue relative group" onMouseOver={() => setCurrentImage('clients')} onMouseLeave={() => setCurrentImage(null)}>
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 Clients
                               </m.div>
+                            </div>
+
+                            <div className="absolute top-0 right-0 mt-2 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case rotate-[25deg] opacity-50 overflow-hidden text-black">
+                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-1 transition-transform ease-in-out duration-500">↑</span>
                             </div>
                           </a>
                           </Link>
                         </li>
 
                         <li>
-                          <a href="https://digitalshowroom.l52.world/" rel="noopener noreferrer" target="_blank" aria-label="Go to digital showroom" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue" onMouseOver={() => setCurrentImage('digital-showroom')} onMouseLeave={() => setCurrentImage(null)}>
+                          <a href="https://digitalshowroom.l52.world/" rel="noopener noreferrer" target="_blank" aria-label="Go to digital showroom" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue relative group" onMouseOver={() => setCurrentImage('digital-showroom')} onMouseLeave={() => setCurrentImage(null)}>
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 Digital Showroom
                               </m.div>
+                            </div>
+
+                            <div className="absolute top-0 right-0 mt-2 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case rotate-[25deg] opacity-50 overflow-hidden text-black">
+                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-1 transition-transform ease-in-out duration-500">↑</span>
                             </div>
                           </a>
                         </li>
 
                         <li>
                           <Link href="/contact">
-                          <a aria-label="Go to contact us" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue" onMouseOver={() => setCurrentImage('contact')} onMouseLeave={() => setCurrentImage(null)}>
+                          <a aria-label="Go to contact us" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue relative group" onMouseOver={() => setCurrentImage('contact')} onMouseLeave={() => setCurrentImage(null)}>
                             <div className="relative overflow-hidden leading-tight">
                               <m.div variants={reveal}>
                                 Contact Us
                               </m.div>
+                            </div>
+
+                            <div className="absolute top-0 right-0 mt-2 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case rotate-[25deg] opacity-50 overflow-hidden text-black">
+                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-1 transition-transform ease-in-out duration-500">↑</span>
                             </div>
                           </a>
                           </Link>

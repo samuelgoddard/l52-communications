@@ -11,7 +11,7 @@
   & > ul > li {
     @apply leading-relaxed;
     &:before {
-      content: '-';
+      content: '·';
       margin-right: 8px;
     }
   }

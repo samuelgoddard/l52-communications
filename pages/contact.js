@@ -3,6 +3,7 @@ import Header from '@/components/header'
 import { fade, reveal, imageScale } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
+import BlockContent from '@sanity/block-content-to-react'
 
 import SanityPageService from '@/services/sanityPageService'
 import image from 'next/image'
@@ -78,42 +79,59 @@ export default function Contact(initialData) {
                     </div>
                     
                     {contact.emailGeneralEnquiries && (
-                      <p><a aria-label="Email link for general enquiries" className="inline-block my-3 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue leading-tight" href={`mailto:${contact.emailGeneralEnquiries}`}>
+                      <p><a aria-label="Email link for general enquiries" className="inline-block my-3 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue leading-tight group relative" href={`mailto:${contact.emailGeneralEnquiries}`}>
                         <div className="overflow-hidden relative">
                           <m.div variants={reveal}>
                             General Enquiries
                           </m.div>
+
+                          
                         </div>
+                        <div className="absolute top-0 right-0 mt-2 w-[17px] h-[17px] mr-[-25px] font-sans text-[18px] normal-case rotate-[25deg] opacity-50 overflow-hidden text-black">
+                            <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-0 transition-transform ease-in-out duration-500">↑</span>
+                          </div>
                       </a></p>
                     )}
 
                     {contact.emailPressEnquiries && (
-                      <p><a aria-label="Email link for press enquiries" className="inline-block my-3 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue leading-tight" href={`mailto:${contact.emailPressEnquiries}`}>
+                      <p><a aria-label="Email link for press enquiries" className="inline-block my-3 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue leading-tight group relative" href={`mailto:${contact.emailPressEnquiries}`}>
                         <div className="overflow-hidden relative">
                           <m.div variants={reveal}>
                             Press Enquiries
                           </m.div>
+
                         </div>
+                        <div className="absolute top-0 right-0 mt-2 w-[17px] h-[17px] mr-[-25px] font-sans text-[18px] normal-case rotate-[25deg] opacity-50 overflow-hidden text-black">
+                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-0 transition-transform ease-in-out duration-500">↑</span>
+                            </div>
                       </a></p>
                     )}
 
                     {contact.instagram && (
-                      <p><a aria-label="Go to our Instagram page" className="inline-block my-3 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue leading-tight" href={contact.instagram} target="_blank" rel="noreferrer">
+                      <p><a aria-label="Go to our Instagram page" className="inline-block my-3 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue leading-tight group relative" href={contact.instagram} target="_blank" rel="noreferrer">
                         <div className="overflow-hidden relative">
                           <m.div variants={reveal}>
                             Instagram
                           </m.div>
+
                         </div>
+                        <div className="absolute top-0 right-0 mt-2 w-[17px] h-[17px] mr-[-25px] font-sans text-[18px] normal-case rotate-[25deg] opacity-50 overflow-hidden text-black">
+                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-0 transition-transform ease-in-out duration-500">↑</span>
+                            </div>
                       </a></p>
                     )}
 
                     {contact.linkedin && (
-                      <p><a aria-label="Go to our Linkedin page" className="inline-block my-3 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue leading-tight" href={contact.linkedin} target="_blank" rel="noreferrer">
+                      <p><a aria-label="Go to our Linkedin page" className="inline-block my-3 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue leading-tight group relative" href={contact.linkedin} target="_blank" rel="noreferrer">
                         <div className="overflow-hidden relative">
                           <m.div variants={reveal}>
                             Linkedin
                           </m.div>
+
                         </div>
+                        <div className="absolute top-0 right-0 mt-2 w-[17px] h-[17px] mr-[-25px] font-sans text-[18px] normal-case rotate-[25deg] opacity-50 overflow-hidden text-black">
+                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-0 transition-transform ease-in-out duration-500">↑</span>
+                            </div>
                       </a></p>
                     )}
 
@@ -124,8 +142,10 @@ export default function Contact(initialData) {
 
                           <h3 className="py-4 mt-5 lg:mt-20 mb-0 font-sans uppercase text-off-black">Find us</h3>
 
-                          <p className="text-off-black">{contact.address}</p>
-
+                          <div className="text-off-black">
+                            <BlockContent serializers={{ container: ({ children }) => children }} blocks={contact.address} />                     
+                          </div>    
+                          
                         </div>
                       )}
 

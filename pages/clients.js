@@ -42,7 +42,7 @@ export default function Clients(initialData) {
                   <Tabs>
                     <TabList className="flex flex-wrap justify-center mb-8">
                       <Tab>
-                        <button className="p-2 text-2xl lg:text-[32px] xs:p-4 font-display group">
+                        <button className="p-2 text-2xl lg:text-[32px] xs:p-4 font-display group italic">
                           <div className="overflow-hidden">
                             <m.div variants={reveal}>
                             <span className="block overflow-hidden relative">
@@ -54,7 +54,7 @@ export default function Clients(initialData) {
                         </button>
                       </Tab>
                       <Tab>
-                        <button className="p-2 text-2xl lg:text-[32px] xs:p-4 font-display group">
+                        <button className="p-2 text-2xl lg:text-[32px] xs:p-4 font-display group italic">
                           <div className="overflow-hidden">
                             <m.div variants={reveal}>
                               <span className="block overflow-hidden relative">

@@ -1,7 +1,7 @@
 import Layout from '@/components/layout'
 import Header from '@/components/header'
 import Container from '@/components/container'
-import { fade, reveal } from '@/helpers/transitions'
+import { fade, reveal, revealDelay1, revealDelay2, revealDelay3 } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
@@ -63,7 +63,23 @@ export default function Home(initialData) {
               )}
 
               <div className="relative overflow-hidden">
-                <m.h1 variants={reveal} className="w-full text-center mb-0 pb-0 font-display text-[10vw] lg:text-[4.5vw] 3xl:text-[4vw] italic text-white mix-blend-difference">{home.headingText}</m.h1>
+                <h1 className="w-full text-center mb-0 pb-0 font-display text-[10vw] lg:text-[4.5vw] 3xl:text-[4vw] italic text-white mix-blend-difference">
+                  <m.span variants={reveal} className="inline-block">
+                    Experts&nbsp;
+                  </m.span>
+
+                  <m.span variants={revealDelay1} className="inline-block">
+                    in&nbsp;
+                  </m.span>
+
+                  <m.span variants={revealDelay2} className="inline-block">
+                    creative&nbsp;
+                  </m.span>
+
+                  <m.span variants={revealDelay3} className="inline-block">
+                    communication.
+                  </m.span>
+                </h1>
               </div>
               
               <div className="w-full self-end pb-[32px] lg:pb-[64px] relative z-10 mix-blend-difference">

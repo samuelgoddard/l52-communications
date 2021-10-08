@@ -80,18 +80,19 @@ export default function WorkIndex(initialData) {
               className="py-32 lg:py-40 bg-white"
             >
               
-                <m.div variants={fade}>
+                <m.div variants={fade} className="relative">
 
                   <Container>
-
+                    
                     <div className="overflow-hidden relative mb-5">
-                      <m.h1 variants={reveal} className="text-left text-2xl lg:text-4xl 2xl:text-5xl leading-tight lg:leading-tight xl:leading-tight mb-0 lg:mb-0 2xl:mb-0">Selected Work</m.h1>
+                      <m.h1 variants={reveal} className="text-left text-2xl lg:text-4xl 2xl:text-5xl leading-tight lg:leading-tight xl:leading-tight mb-0 lg:mb-0 2xl:mb-0 italic">Selected Work</m.h1>
                     </div>
 
-                    <ul className="flex flex-wrap justify-start max-w-3xl">
+                    <div className="absolute top-0 right-0 bottom-0 h-[100px] w-[100px] bg-gradient-to-r from-transparent to-white z-10"></div>
+                    <ul className="flex flex-nowrap flex-row justify-start overflow-scroll relative">
                       {categories.map((cat, i) => {
                         return cat.relatedWork.length > 0 && (
-                          <li className=" pl-0 ml-0" id={i} key={i}>
+                          <li className="block w-auto flex-none pl-0 ml-0" id={i} key={i}>
                             <ScrollToButton scrollTarget={`#${cat.slug.current}`}>
                               <div className="overflow-hidden relative">
                                 <m.div variants={reveal}>

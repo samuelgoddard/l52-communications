@@ -110,10 +110,10 @@ export default function WorkSlug(initialData) {
                       <div className="flex flex-wrap items-end justify-center">
                         <div className="w-full text-center sm:my-0 sm:w-1/3 sm:text-left">
                           <Link href="/work">
-                            <a className="uppercase text-blue">
+                            <a className="uppercase text-blue border border-black border-opacity-20 hover:border-opacity-100 transition-all ease-in-out duration-500 px-4 py-1 hidden md:inline-block">
                               <div className="overflow-hidden relative">
                                 <m.div variants={reveal}>
-                                  Back to work
+                                  ← All Projects
                                 </m.div>
                               </div>
                             </a>
@@ -123,7 +123,7 @@ export default function WorkSlug(initialData) {
                         <div className="w-full text-center sm:my-0 sm:w-1/3">
                             {client && (
                               <div className="overflow-hidden relative mb-[0.5rem]">
-                                <m.h1 variants={reveal} className="text-xl font-sans text-black mb-0 pb-0">{client}</m.h1>
+                                <m.h1 variants={reveal} className="text-base font-sans text-blue mb-0 pb-0">{client}</m.h1>
                               </div>
                             )}
                             <div className="relative overflow-hidden">

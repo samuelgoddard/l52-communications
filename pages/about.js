@@ -148,7 +148,7 @@ export default function About(initialData) {
                   <div className="w-full pt-8 p-6 md:px-8 lg:w-1/2 lg:px-[6vw] lg:py-[12vh]">
                     
                     <div className="mx-auto max-w-[760px]">
-                      <h1 className="mb-8 text-2xl md:text-3xl xl:text-4xl 2xl:text-[2.8rem] 2xl:leading-tight lg:mt-[3rem]">{about.headingText}</h1>
+                      <h1 className="mb-8 text-2xl md:text-3xl xl:text-4xl 2xl:text-[2.8rem] 2xl:leading-tight lg:mt-[3rem] italic">{about.headingText}</h1>
 
                       <div className="flex-wrap justify-between mb-4 lg:flex">
                         <div className="lg:pr-8 pb-4 content content--cols text-off-black 2xl:text-[1.02rem]">

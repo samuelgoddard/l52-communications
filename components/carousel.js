@@ -7,7 +7,7 @@ import Container from './container';
 
 export default function Carousel({ title, items, id }) {
 
-    const [viewportRef, embla] = useEmblaCarousel({ loop: true, dragFree: true, slidesToScroll: 2, speed: 3 });
+    const [viewportRef, embla] = useEmblaCarousel({ loop: true, dragFree: true, slidesToScroll: 2, speed: 3, align: 0.045 });
 
     const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
     const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
@@ -27,12 +27,13 @@ export default function Carousel({ title, items, id }) {
         setNextBtnEnabled(embla.canScrollNext());
     }, [embla, setSelectedIndex]);
 
+
     useEffect(() => {
         if (!embla) return;
         onSelect();
         setScrollSnaps(embla.scrollSnapList());
         embla.on("select", onSelect);
-    }, [embla, setScrollSnaps, onSelect]);
+      }, [embla, setScrollSnaps, onSelect]);
 
     return (
 
@@ -40,12 +41,12 @@ export default function Carousel({ title, items, id }) {
                 
                 <div className="relative overflow-hidden mb-6">
                     <Container>
-                        <div className="flex">
+                        <div className="flex items-center">
                             <m.h2 variants={reveal} className="font-sans text-left uppercase mb-0 pb-0" id={`${id}`}>{title}</m.h2>
                             
                             <div className="flex ml-auto">
                                 <button
-                                    className="block mr-5 text-xl text-blue"
+                                    className="mr-2 lg:mr-3 text-base text-blue border-black border border-opacity-20 w-[30px] lg:w-[35px] h-[30px] lg:h-[35px] flex items-center justify-center hover:border-opacity-100 transition-all ease-in-out duration-500"
                                     onClick={scrollPrev}
                                     disabled={!prevBtnEnabled}
                                 >
@@ -53,7 +54,7 @@ export default function Carousel({ title, items, id }) {
                                 </button>
 
                                 <button
-                                    className="block text-xl text-blue"
+                                    className="text-base text-blue border-black border border-opacity-20 w-[30px] lg:w-[35px] h-[30px] lg:h-[35px] flex items-center justify-center hover:border-opacity-100 transition-all ease-in-out duration-500"
                                     onClick={scrollNext}
                                     disabled={!nextBtnEnabled}
                                 >
@@ -64,7 +65,8 @@ export default function Carousel({ title, items, id }) {
                     </Container>
                 </div>
 
-                <div className={`embla embla__viewport`} ref={viewportRef}>
+                <div className={`embla`} >
+                    <div className="embla__viewport" ref={viewportRef}>
                   <div className="embla__container">
                     {items.map((e, i) => {
                         let detailTitle = '';
@@ -122,7 +124,8 @@ export default function Carousel({ title, items, id }) {
                     })}
                   </div>
 
-                </div>      
+                </div>    
+                </div>  
 
               </div>
 
