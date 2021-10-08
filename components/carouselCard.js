@@ -6,7 +6,7 @@ import ImageWrapper from './image-wrapper'
 export default function CarouselCard({ image, title, detail, link, index }) {
     return (
 
-                    <Link href={link}>
+                    <Link href={link} scroll={false}>
                         <a className="flex flex-wrap group overflow-hidden group w-full">
                             <div className="w-full">
                                 <div className="overflow-hidden mb-4 relative">

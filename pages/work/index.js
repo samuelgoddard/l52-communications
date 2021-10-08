@@ -93,7 +93,7 @@ export default function WorkIndex(initialData) {
                       {categories.map((cat, i) => {
                         return cat.relatedWork.length > 0 && (
                           <li className="block w-auto flex-none pl-0 ml-0" id={i} key={i}>
-                            <ScrollToButton scrollTarget={`#${cat.slug.current}`}>
+                            <ScrollToButton scrollTarget={`${cat.slug.current}`}>
                               <div className="overflow-hidden relative">
                                 <m.div variants={reveal}>
                                   <span className="block overflow-hidden relative">
