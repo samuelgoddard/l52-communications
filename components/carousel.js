@@ -45,7 +45,7 @@ export default function Carousel({ title, items, id }) {
                         <div className="flex items-center">
                             <m.h2 variants={reveal} className="font-sans text-left uppercase mb-0 pb-0 pt-12 lg:pt-24" id={`${id}`}>{title}</m.h2>
                             
-                            <div className="flex ml-auto pt-12 lg:pt-24">
+                            <div className="flex ml-auto pt-12 lg:pt-24 relative z-[100]">
                                 <button
                                     className="mr-2 lg:mr-3 text-base text-blue border-black hover:border-blue border border-opacity-20 w-[30px] lg:w-[35px] h-[30px] lg:h-[35px] flex items-center justify-center hover:border-opacity-100 transition-all ease-in-out duration-500"
                                     onClick={scrollPrev}
