@@ -71,7 +71,7 @@ export default function About(initialData) {
 
                 <div className="flex flex-wrap items-center justify-end w-full min-h-[40vh] lg:min-h-screen">
 
-                  <div className="relative w-full min-h-[40vh] lg:min-h-screen lg:w-1/2 lg:max-h-screen lg:fixed lg:top-0 lg:left-0 lg:bottom-0 bg-gray-100 overflow-hidden">
+                  <div className="relative w-full min-h-[50vh] lg:min-h-screen lg:w-1/2 lg:max-h-screen lg:fixed lg:top-0 lg:left-0 lg:bottom-0 bg-gray-100 overflow-hidden">
                     <m.div variants={imageScale} className="absolute inset-0">
                       <img className={`absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 transition-opacity ease-in-out duration-500 ${ currentImage > 0 ? 'opacity-0' : 'opacity-100' }`} src={about.heroImage.asset.url} alt="" />
                       

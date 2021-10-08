@@ -61,7 +61,7 @@ export default function Menu(initialData) {
                 
                 <div className="flex flex-wrap items-center justify-end w-full min-h-[40vh] lg:min-h-screen lg:flex-row-reverse">
                   
-                  <div className="relative w-full min-h-[40vh] lg:min-h-screen lg:w-1/2 lg:fixed lg:top-0 lg:right-0 bg-gray-100 overflow-hidden">
+                  <div className="relative w-full min-h-[50vh] lg:min-h-screen lg:w-1/2 lg:fixed lg:top-0 lg:right-0 bg-gray-100 overflow-hidden">
                     <m.div variants={imageScale}  className="absolute inset-0">
                       {/* <img className="absolute object-cover object-top w-full h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src={contact.homeMenuImage.asset.url} /> */}
                       
