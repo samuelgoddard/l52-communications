@@ -7,6 +7,13 @@ export default {
     locale: 'en_GB',
     url: 'https://l52-communications.vercel.app/',
     site_name: 'L52 Communications',
+    images: [
+      {
+        url: '/images/social.jpg',
+        width: 1200,
+        height: 600
+      },
+    ]
   },
   twitter: {
     handle: '@samuelgoddard',
