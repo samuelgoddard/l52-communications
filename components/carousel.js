@@ -115,7 +115,7 @@ export default function Carousel({ title, items, id }) {
                         if (!e.date && !e.title) {
                             detailNone = 'View More'
                         }
-                        return items.length < 5 && (
+                        return items.length < 8 && (
                             <div className="embla__slide" key={i}>
                                 <div className="embla__slide__inner">
                                 <CarouselCard

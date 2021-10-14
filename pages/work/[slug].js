@@ -85,14 +85,14 @@ export default function WorkSlug(initialData) {
 
                   <div className="relative">
 
-                    <div className="embla mt-[-5vh]">
+                    <div className="embla ">
                       <div className="embla__viewport" ref={viewportRef}>
                         <div className="embla__container">
                             {imagesCarousel.map((e,i) => {
                               return (
                                 <div className="embla__slide embla__slide--single" key={i}>
                                   <div className="embla__slide__inner text-center">
-                                    <div className="h-[44vh] lg:h-[58vh] mx-auto">
+                                    <div className="h-[42vh] md:h-[40vh] lg:h-[48vh] 2xl:h-[50vh] mx-auto">
                                       <img className="h-full mx-auto object-cover object-center" src={e.asset.url} alt="" />
                                     </div> 
                                   </div>
