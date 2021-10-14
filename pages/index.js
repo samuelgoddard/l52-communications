@@ -49,7 +49,7 @@ export default function Home(initialData) {
           
           <m.div variants={fade}>
 
-            <Div100vh className="relative flex flex-wrap items-end justify-center w-full min-h-screen bg-black bg-center bg-cover">
+            <Div100vh className="relative flex flex-wrap items-end justify-center w-full bg-black bg-center bg-cover">
               {home.backgroundImage && (
                 <div className="absolute inset-0 z-0">
                   <img src={home.backgroundImage.asset.url} alt="ADD AN ALT SAM" className="w-full h-full object-cover object-center" />
