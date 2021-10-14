@@ -6,6 +6,8 @@ import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import SanityPageService from '@/services/sanityPageService'
+import Div100vh from 'react-div-100vh'
+
 
 const query = `{
   "home": *[_type == "home"][0]{
@@ -47,7 +49,7 @@ export default function Home(initialData) {
           
           <m.div variants={fade}>
 
-            <div className="relative flex flex-wrap items-end justify-center w-full min-h-screen bg-black bg-center bg-cover">
+            <Div100vh className="relative flex flex-wrap items-end justify-center w-full min-h-screen bg-black bg-center bg-cover">
               {home.backgroundImage && (
                 <div className="absolute inset-0 z-0">
                   <img src={home.backgroundImage.asset.url} alt="ADD AN ALT SAM" className="w-full h-full object-cover object-center" />
@@ -152,7 +154,7 @@ export default function Home(initialData) {
                 </Container>
               </div>
 
-            </div>
+            </Div100vh>
           </m.div>
           
         </m.div>
