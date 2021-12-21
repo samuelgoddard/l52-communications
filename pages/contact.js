@@ -138,7 +138,7 @@ export default function Contact(initialData) {
 
                     <div className="flex-wrap self-end w-full lg:flex">
                       
-                      {contact.address && (
+                      {/* {contact.address && (
                         <div className="lg:w-1/2">
 
                           <h3 className="py-4 mt-5 lg:mt-20 mb-0 font-sans uppercase text-off-black">Find us</h3>
@@ -148,7 +148,7 @@ export default function Contact(initialData) {
                           </div>    
                           
                         </div>
-                      )}
+                      )} */}
 
                       <div className="lg:w-1/2 mb-5 lg:mb-0">
 
