@@ -136,7 +136,7 @@ export default function Contact(initialData) {
                       </a></p>
                     )}
 
-                    <div className="flex-wrap self-end w-full lg:flex">
+                    <div className=" w-full">
                       
                       {/* {contact.address && (
                         <div className="lg:w-1/2">
