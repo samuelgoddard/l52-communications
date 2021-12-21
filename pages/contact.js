@@ -136,19 +136,19 @@ export default function Contact(initialData) {
                       </a></p>
                     )}
 
-                    <div className=" w-full">
+                    <div className="w-full">
                       
-                      {/* {contact.address && (
+                      {contact.address && (
                         <div className="lg:w-1/2">
 
-                          <h3 className="py-4 mt-5 lg:mt-20 mb-0 font-sans uppercase text-off-black">Find us</h3>
+                          {/* <h3 className="py-4 mt-5 lg:mt-20 mb-0 font-sans uppercase text-off-black">Find us</h3>
 
                           <div className="text-off-black">
                             <BlockContent serializers={{ container: ({ children }) => children }} blocks={contact.address} />                     
-                          </div>    
+                          </div>     */}
                           
                         </div>
-                      )} */}
+                      )}
 
                       <div className="lg:w-1/2 mb-5 lg:mb-0">
 
