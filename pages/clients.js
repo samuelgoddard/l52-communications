@@ -5,6 +5,7 @@ import { fade, reveal } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import ConditionalWrap from 'conditional-wrap';
 
 import SanityPageService from '@/services/sanityPageService'
 
@@ -14,7 +15,8 @@ const query = `{
     logo {
       asset ->
     },
-    recent
+    recent,
+    link
   }
 }`
 
@@ -72,7 +74,22 @@ export default function Clients(initialData) {
                         {clients.map((client, i) => {
                           return !client.recent && (
                             <li key={i} className="w-1/2 p-8 xs:p-8 xs:w-1/2 md:p-8 lg:p-10 xl:p-8 2xl:p-16 md:w-[18%] lg:w-[18%] xl:w-[18%]">
-                              <img src={client.logo.asset.url} alt={client.title} className="w-full" />
+
+                              <ConditionalWrap
+                                condition={!!client.link}
+                                wrap={children => (
+                                  <a
+                                    href={client.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block w-full hover:opacity-50 focus:opacity-50 transition-opacity ease-in-out duration-300"
+                                  >
+                                    {children}
+                                  </a>
+                                )}
+                              >
+                                <img src={client.logo.asset.url} alt={client.title} className="w-full" />
+                              </ConditionalWrap>
                             </li>
                           )
                         })}
