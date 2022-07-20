@@ -76,61 +76,40 @@ export default function Contact(initialData) {
                 className="md:flex md:flex-nowrap md:flex-row md:justify-start md:overflow-scroll relative md:space-x-8 mb-6 md:mb-10"
               >
                 {contact.emailGeneralEnquiries && (
-                  <p><a aria-label="Email link for general enquiries" className="inline-block my-3 mt-1  mb-0 pb-0 font-sans uppercase  text-blue text-[15px] md:text-[17px] leading-tight group relative" href={`mailto:${contact.emailGeneralEnquiries}?subject=General Enquiry`}>
-                    <div className="overflow-hidden relative">
-                      <m.div variants={reveal}>
-                        General Enquiries
-                      </m.div>
-
-                      
-                    </div>
-                    <div className="absolute top-0 right-0 mt-[-4px] w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case overflow-hidden text-black">
-                          <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-0 transition-transform ease-in-out duration-500 normal-case"><svg className="w-[15px]" viewBox="0 0 9 8" xmlns="http://www.w3.org/2000/svg"><path d="M5.268.478 8.461.184l-.414 3.171-1.178-1.219L.756 8.04l-.424-.439 6.113-5.904z" fill="#8F8F8F" fill-rule="nonzero"/></svg></span>
-                        </div>
-                  </a></p>
+                  <span className="block overflow-hidden relative">
+                    <m.a variants={fade} href={`mailto:${contact.emailGeneralEnquiries}?subject=General Enquiry`} target="_blank" rel="noopener noreferrer" className="hover:border-0 focus:border-0 hover:outline-none focus:outline-none group block uppercase cursor-pointer group text-blue">
+                      <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">General Enquiries</span>
+                      <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">General Enquiries</span>
+                    </m.a>
+                  </span>
                 )}
 
                 {contact.emailPressEnquiries && (
-                  <p><a aria-label="Email link for press enquiries" className="inline-block my-3 mt-1  mb-0 pb-0 font-sans uppercase  text-blue text-[15px] md:text-[17px] leading-tight group relative" href={`mailto:${contact.emailPressEnquiries}?subject=Press Enquiry`}>
-                    <div className="overflow-hidden relative">
-                      <m.div variants={reveal}>
-                        Press Enquiries
-                      </m.div>
-
-                    </div>
-                    <div className="absolute top-0 right-0 mt-[-4px] w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case overflow-hidden text-black">
-                          <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-0 transition-transform ease-in-out duration-500 normal-case"><svg className="w-[15px]" viewBox="0 0 9 8" xmlns="http://www.w3.org/2000/svg"><path d="M5.268.478 8.461.184l-.414 3.171-1.178-1.219L.756 8.04l-.424-.439 6.113-5.904z" fill="#8F8F8F" fill-rule="nonzero"/></svg></span>
-                        </div>
-                  </a></p>
+                  <span className="block overflow-hidden relative">
+                    <m.a variants={fade} href={`mailto:${contact.emailPressEnquiries}?subject=Press Enquiry`} target="_blank" rel="noopener noreferrer" className="hover:border-0 focus:border-0 hover:outline-none focus:outline-none group block uppercase cursor-pointer group text-blue">
+                      <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Press Enquiries</span>
+                      <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">Press Enquiries</span>
+                    </m.a>
+                  </span>
                 )}
 
                 {contact.instagram && (
-                  <p><a aria-label="Go to our Instagram page" className="inline-block my-3 mt-1  mb-0 pb-0 font-sans uppercase  text-blue text-[15px] md:text-[17px] leading-tight group relative" href={contact.instagram} target="_blank" rel="noreferrer">
-                    <div className="overflow-hidden relative">
-                      <m.div variants={reveal}>
-                        Instagram
-                      </m.div>
-
-                    </div>
-                    <div className="absolute top-0 right-0 mt-[-4px] w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case overflow-hidden text-black">
-                          <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-0 transition-transform ease-in-out duration-500 normal-case"><svg className="w-[15px]" viewBox="0 0 9 8" xmlns="http://www.w3.org/2000/svg"><path d="M5.268.478 8.461.184l-.414 3.171-1.178-1.219L.756 8.04l-.424-.439 6.113-5.904z" fill="#8F8F8F" fill-rule="nonzero"/></svg></span>
-                        </div>
-                  </a></p>
+                  <span className="block overflow-hidden relative">
+                    <m.a variants={fade} href={contact.instagram} target="_blank" rel="noopener noreferrer" className="hover:border-0 focus:border-0 hover:outline-none focus:outline-none group block uppercase cursor-pointer group text-blue">
+                      <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Instagram</span>
+                      <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">Instagram</span>
+                    </m.a>
+                  </span>
                 )}
 
                 {contact.linkedin && (
-                  <p><a aria-label="Go to our Linkedin page" className="inline-block my-3 mt-1  mb-0 pb-0 font-sans uppercase  text-blue text-[15px] md:text-[17px] leading-tight group relative" href={contact.linkedin} target="_blank" rel="noreferrer">
-                    <div className="overflow-hidden relative">
-                      <m.div variants={reveal}>
-                        Linkedin
-                      </m.div>
-
-
-                    </div>
-                    <div className="absolute top-0 right-0 mt-[-4px] w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case overflow-hidden text-black">
-                          <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-0 transition-transform ease-in-out duration-500 normal-case"><svg className="w-[15px]" viewBox="0 0 9 8" xmlns="http://www.w3.org/2000/svg"><path d="M5.268.478 8.461.184l-.414 3.171-1.178-1.219L.756 8.04l-.424-.439 6.113-5.904z" fill="#8F8F8F" fill-rule="nonzero"/></svg></span>
-                        </div>
-                  </a></p>
+                  <span className="block overflow-hidden relative">
+                    <m.a variants={fade} href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="hover:border-0 focus:border-0 hover:outline-none focus:outline-none group block uppercase cursor-pointer group text-blue">
+                      <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">LinkedIn</span>
+                      <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">LinkedIn</span>
+                    </m.a>
+                  </span>
+                  
                 )}
               </m.div>
               <div className="w-full mx-auto">
