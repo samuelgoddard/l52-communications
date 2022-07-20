@@ -90,8 +90,7 @@ export default function Contact(initialData) {
                       <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Press Enquiries</span>
                       <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">Press Enquiries</span>
                     </m.a>
-                  </span>
-                  
+                  </span>                  
                 )}
 
                 {contact.instagram && (
