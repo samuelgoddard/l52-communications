@@ -141,8 +141,8 @@ export default function Contact(initialData) {
                           <img className="absolute object-cover object-center w-full h-full" src={contact.addressImage.asset.url} alt="" />
                         </div>
 
-                        <div className="text-off-black text-[17px]">
-                          <span className="uppercase text-black text-[16px] md:text-[18px] block mb-2">{contact.addressTitle}</span>
+                        <div className="text-off-black text-[14px]">
+                          <span className="uppercase text-black text-[16px] md:text-[16px] block mb-2">{contact.addressTitle}</span>
                           <BlockContent serializers={{ container: ({ children }) => children }} blocks={contact.address} />                     
                         </div> 
                       </div>
@@ -152,8 +152,8 @@ export default function Contact(initialData) {
                           <img className="absolute object-cover object-center w-full h-full" src={contact.address2Image.asset.url} alt="" />
                         </div>
 
-                        <div className="text-off-black text-[17px]">
-                          <span className="uppercase text-black text-[16px] md:text-[18px] block mb-2">{contact.address2Title}</span>
+                        <div className="text-off-black text-[14px]">
+                          <span className="uppercase text-black text-[16px] md:text-[16px] block mb-2">{contact.address2Title}</span>
                           <BlockContent serializers={{ container: ({ children }) => children }} blocks={contact.address2} />                     
                         </div> 
                       </div>
