@@ -68,52 +68,6 @@ export default function Contact(initialData) {
                 <m.h1 variants={reveal} className="text-left text-2xl lg:text-4xl 2xl:text-5xl leading-tight lg:leading-tight xl:leading-tight mb-0 lg:mb-0 2xl:mb-0 italic">Contact Us</m.h1>
               </div>
 
-              <m.div
-                initial="initial"
-                animate="enter"
-                exit="exit"
-                variants={{
-                  enter: { transition: { staggerChildren: 0.04 } }
-                }}
-                className="md:flex md:flex-nowrap md:flex-row md:justify-start md:overflow-scroll relative md:space-x-8 mb-6 md:mb-10"
-              >
-                {contact.emailGeneralEnquiries && (
-                  <span className="block overflow-hidden relative">
-                    <m.a variants={fade} href={`mailto:${contact.emailGeneralEnquiries}?subject=General Enquiry`} target="_blank" rel="noopener noreferrer" className="hover:border-0 focus:border-0 hover:outline-none focus:outline-none group block uppercase cursor-pointer group text-blue">
-                      <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">General Enquiries</span>
-                      <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">General Enquiries</span>
-                    </m.a>
-                  </span>
-                )}
-
-                {contact.emailPressEnquiries && (
-                  <span className="block overflow-hidden relative">
-                    <m.a variants={fade} href={`mailto:${contact.emailPressEnquiries}?subject=Press Enquiry`} target="_blank" rel="noopener noreferrer" className="hover:border-0 focus:border-0 hover:outline-none focus:outline-none group block uppercase cursor-pointer group text-blue">
-                      <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Press Enquiries</span>
-                      <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">Press Enquiries</span>
-                    </m.a>
-                  </span>                  
-                )}
-
-                {contact.instagram && (
-                  <span className="block overflow-hidden relative">
-                    <m.a variants={fade} href={contact.instagram} target="_blank" rel="noopener noreferrer" className="hover:border-0 focus:border-0 hover:outline-none focus:outline-none group block uppercase cursor-pointer group text-blue">
-                      <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Instagram</span>
-                      <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">Instagram</span>
-                    </m.a>
-                  </span>
-                )}
-
-                {contact.linkedin && (
-                  <span className="block overflow-hidden relative">
-                    <m.a variants={fade} href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="hover:border-0 focus:border-0 hover:outline-none focus:outline-none group block uppercase cursor-pointer group text-blue">
-                      <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">LinkedIn</span>
-                      <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">LinkedIn</span>
-                    </m.a>
-                  </span>
-                  
-                )}
-              </m.div>
               <div className="w-full mx-auto">
                 
                 <div className="flex flex-wrap w-full">
@@ -197,7 +151,54 @@ export default function Contact(initialData) {
 
                 </div>
 
-              </div>           
+              </div>   
+
+              <m.div
+                initial="initial"
+                animate="enter"
+                exit="exit"
+                variants={{
+                  enter: { transition: { staggerChildren: 0.04 } }
+                }}
+                className="md:flex md:flex-nowrap md:flex-row md:justify-start md:overflow-scroll relative md:space-x-8 mt-6 md:mt-10"
+              >
+                {/* {contact.emailGeneralEnquiries && (
+                  <span className="block overflow-hidden relative">
+                    <m.a variants={fade} href={`mailto:${contact.emailGeneralEnquiries}?subject=General Enquiry`} target="_blank" rel="noopener noreferrer" className="hover:border-0 focus:border-0 hover:outline-none focus:outline-none group block uppercase cursor-pointer group text-blue">
+                      <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">General Enquiries</span>
+                      <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">General Enquiries</span>
+                    </m.a>
+                  </span>
+                )}
+
+                {contact.emailPressEnquiries && (
+                  <span className="block overflow-hidden relative">
+                    <m.a variants={fade} href={`mailto:${contact.emailPressEnquiries}?subject=Press Enquiry`} target="_blank" rel="noopener noreferrer" className="hover:border-0 focus:border-0 hover:outline-none focus:outline-none group block uppercase cursor-pointer group text-blue">
+                      <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Press Enquiries</span>
+                      <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">Press Enquiries</span>
+                    </m.a>
+                  </span>                  
+                )} */}
+
+                {contact.instagram && (
+                  <span className="block overflow-hidden relative">
+                    <m.a variants={fade} href={contact.instagram} target="_blank" rel="noopener noreferrer" className="hover:border-0 focus:border-0 hover:outline-none focus:outline-none group block uppercase cursor-pointer group text-blue">
+                      <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Instagram</span>
+                      <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">Instagram</span>
+                    </m.a>
+                  </span>
+                )}
+
+                {contact.linkedin && (
+                  <span className="block overflow-hidden relative">
+                    <m.a variants={fade} href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="hover:border-0 focus:border-0 hover:outline-none focus:outline-none group block uppercase cursor-pointer group text-blue">
+                      <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">LinkedIn</span>
+                      <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">LinkedIn</span>
+                    </m.a>
+                  </span>
+                  
+                )}
+              </m.div>        
             </Container>   
               
             </m.div>
