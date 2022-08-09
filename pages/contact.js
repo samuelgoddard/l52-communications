@@ -25,8 +25,10 @@ const query = `{
     addressImage {
       asset ->
     },
+    addressEmail,
     address2,
     address2Title,
+    address2Email,
     address2Image {
       asset ->
     },
@@ -143,7 +145,12 @@ export default function Contact(initialData) {
 
                         <div className="text-off-black text-[14px]">
                           <span className="uppercase text-black text-[14px] md:text-[14px] block mb-2">{contact.addressTitle}</span>
-                          <BlockContent serializers={{ container: ({ children }) => children }} blocks={contact.address} />                     
+                          <BlockContent serializers={{ container: ({ children }) => children }} blocks={contact.address} /> 
+
+                          <a href={`mailto:${contact.addressEmail}`} target="_blank" rel="noopener noreferrer" className="hover:border-0 focus:border-0 hover:outline-none focus:outline-none group block uppercase cursor-pointer group text-blue relative overflow-hidden mt-4">
+                            <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Contact L52 {contact.addressTitle}</span>
+                            <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">Contact L52 {contact.addressTitle}</span>
+                          </a>                    
                         </div> 
                       </div>
 
@@ -154,7 +161,12 @@ export default function Contact(initialData) {
 
                         <div className="text-off-black text-[14px]">
                           <span className="uppercase text-black text-[14px] md:text-[14px] block mb-2">{contact.address2Title}</span>
-                          <BlockContent serializers={{ container: ({ children }) => children }} blocks={contact.address2} />                     
+                          <BlockContent serializers={{ container: ({ children }) => children }} blocks={contact.address2} /> 
+                          
+                          <a href={`mailto:${contact.address2Email}`} target="_blank" rel="noopener noreferrer" className="hover:border-0 focus:border-0 hover:outline-none focus:outline-none group block uppercase cursor-pointer group text-blue relative overflow-hidden mt-4">
+                            <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Contact L52 {contact.address2Title}</span>
+                            <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">Contact L52 {contact.address2Title}</span>
+                          </a>
                         </div> 
                       </div>
                       
