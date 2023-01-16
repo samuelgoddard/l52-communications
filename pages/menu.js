@@ -120,18 +120,6 @@ export default function Menu(initialData) {
                         </div>
                       )}
 
-                      {contact.digitalShowroomMenuImage && (
-                        <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 'digital-showroom' ? 'opacity-100' : 'opacity-0' }`}>
-                          <ImageWrapper
-                            image={contact.digitalShowroomMenuImage.asset}
-                            className="absolute object-cover object-top w-full h-full"
-                            baseWidth={1200}
-                            baseHeight={1600}
-                            fill
-                          />
-                        </div>
-                      )}
-
                       {contact.contactMenuImage && (
                         <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 'contact' ? 'opacity-100' : 'opacity-0' }`}>
                           <ImageWrapper
@@ -220,20 +208,6 @@ export default function Menu(initialData) {
                             </div>
                           </a>
                           </Link>
-                        </li>
-
-                        <li>
-                          <a href="https://digitalshowroom.l52.world/" rel="noopener noreferrer" target="_blank" aria-label="Go to digital showroom" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue relative group" onMouseOver={() => setCurrentImage('digital-showroom')} onMouseLeave={() => setCurrentImage(null)}>
-                            <div className="relative overflow-hidden leading-tight">
-                              <m.div variants={reveal}>
-                                Digital Showroom
-                              </m.div>
-                            </div>
-
-                            <div className="absolute top-0 right-0 mt-4 w-[15px] h-[15px] mr-[-20px] font-sans text-[18px] normal-case overflow-hidden text-black">
-                              <span className="block -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:-translate-y-0 transition-transform ease-in-out duration-500 normal-case"><svg className="w-[15px]" viewBox="0 0 9 8" xmlns="http://www.w3.org/2000/svg"><path d="M5.268.478 8.461.184l-.414 3.171-1.178-1.219L.756 8.04l-.424-.439 6.113-5.904z" fill="#8F8F8F" fill-rule="nonzero"/></svg></span>
-                            </div>
-                          </a>
                         </li>
 
                         <li>
