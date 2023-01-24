@@ -91,7 +91,7 @@ export default function Carousel({ title, items, id }) {
                                     index={i}
                                     image={e.teaserImage.asset}
                                     title={e.client}
-                                    detail={`${detailTitle} ${detailDate} ${detailNone}`}
+                                    detail={`${detailTitle}, ${detailDate} ${detailNone}`}
                                     link={`/work/${e.slug.current}`}
                                     onClick={() => onSlideClick(i)}
                                 />  
@@ -122,7 +122,7 @@ export default function Carousel({ title, items, id }) {
                                     index={i}
                                     image={e.teaserImage.asset}
                                     title={e.client}
-                                    detail={`${detailTitle} ${detailDate} ${detailNone}`}
+                                    detail={`${detailTitle}, ${detailDate} ${detailNone}`}
                                     link={`/work/${e.slug.current}`}
                                 />   
                                 </div>     
