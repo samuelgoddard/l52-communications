@@ -130,6 +130,7 @@ export default function Contact(initialData) {
                         </div> 
                       </div>
                       
+                      
                       <div className="col-span-12 md:col-span-6 lg:col-span-4">
                         <div className="w-full h-[55vw] md:h-[30vw] lg:h-[20vw] relative overflow-hidden mb-4">
                           <img className="absolute object-cover object-center w-full h-full" src={contact.address3Image.asset.url} alt="" />
