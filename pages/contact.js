@@ -32,6 +32,12 @@ const query = `{
     address2Image {
       asset ->
     },
+    address3,
+    address3Title,
+    address3Email,
+    address3Image {
+      asset ->
+    },
     seo {
       ...,
       shareGraphic {
@@ -90,10 +96,10 @@ export default function Contact(initialData) {
                     }}
                   >
 
-                    <div className="w-full md:flex md:space-x-5">
+                    <div className="grid grid-cols-12 md:gap-5">
 
-                      <div className="md:w-1/2 mb-6 md:mb-0">
-                        <div className="w-full h-[55vw] md:h-[30vw] relative overflow-hidden mb-4">
+                      <div className="col-span-12 md:col-span-6 lg:col-span-4 mb-6 md:mb-0">
+                        <div className="w-full h-[55vw] md:h-[30vw] lg:h-[20vw] relative overflow-hidden mb-4">
                           <img className="absolute object-cover object-center w-full h-full" src={contact.addressImage.asset.url} alt="" />
                         </div>
 
@@ -108,8 +114,8 @@ export default function Contact(initialData) {
                         </div> 
                       </div>
 
-                      <div className="md:w-1/2">
-                        <div className="w-full h-[55vw] md:h-[30vw] relative overflow-hidden mb-4">
+                      <div className="col-span-12 md:col-span-6 lg:col-span-4">
+                        <div className="w-full h-[55vw] md:h-[30vw] lg:h-[20vw] relative overflow-hidden mb-4">
                           <img className="absolute object-cover object-center w-full h-full" src={contact.address2Image.asset.url} alt="" />
                         </div>
 
@@ -120,6 +126,22 @@ export default function Contact(initialData) {
                           <a href={`mailto:${contact.address2Email}`} target="_blank" rel="noopener noreferrer" className="hover:border-0 focus:border-0 hover:outline-none focus:outline-none group block uppercase cursor-pointer group text-blue relative overflow-hidden mt-4">
                             <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Contact L52 {contact.address2Title}</span>
                             <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">Contact L52 {contact.address2Title}</span>
+                          </a>
+                        </div> 
+                      </div>
+                      
+                      <div className="col-span-12 md:col-span-6 lg:col-span-4">
+                        <div className="w-full h-[55vw] md:h-[30vw] lg:h-[20vw] relative overflow-hidden mb-4">
+                          <img className="absolute object-cover object-center w-full h-full" src={contact.address3Image.asset.url} alt="" />
+                        </div>
+
+                        <div className="text-off-black text-[14px]">
+                          <span className="uppercase text-black text-[14px] md:text-[14px] block mb-2">{contact.address3Title}</span>
+                          <BlockContent serializers={{ container: ({ children }) => children }} blocks={contact.address3} /> 
+                          
+                          <a href={`mailto:${contact.address3Email}`} target="_blank" rel="noopener noreferrer" className="hover:border-0 focus:border-0 hover:outline-none focus:outline-none group block uppercase cursor-pointer group text-blue relative overflow-hidden mt-4">
+                            <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Contact L52 {contact.address3Title}</span>
+                            <span className="absolute left-0 top-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full text-off-white">Contact L52 {contact.address3Title}</span>
                           </a>
                         </div> 
                       </div>
