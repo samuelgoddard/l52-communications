@@ -96,7 +96,7 @@ export default function Menu(initialData) {
                         </div>
                       )}
 
-                      {contact.workMenuImage && (
+                      {/* {contact.workMenuImage && (
                         <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 'work' ? 'opacity-100' : 'opacity-0' }`}>
                           <ImageWrapper
                             image={contact.workMenuImage.asset}
@@ -106,7 +106,7 @@ export default function Menu(initialData) {
                             fill
                           />
                         </div>
-                      )}
+                      )} */}
 
                       {contact.clientsMenuImage && (
                         <div className={`absolute inset-0 z-100 transition-opacity ease-in-out duration-500 ${ currentImage == 'clients' ? 'opacity-100' : 'opacity-0' }`}>
@@ -178,7 +178,7 @@ export default function Menu(initialData) {
                           </Link>
                         </li>
 
-                        <li>
+                        {/* <li>
                           <Link href="/work">
                           <a aria-label="Go to about" className="inline-block py-2 text-[28px] italic lg:text-[2.6vw] 2xl:text-[3vw] font-display text-blue relative group" onMouseOver={() => setCurrentImage('work')} onMouseLeave={() => setCurrentImage(null)}>
                             <div className="relative overflow-hidden leading-tight">
@@ -192,7 +192,7 @@ export default function Menu(initialData) {
                             </div>
                           </a>
                           </Link>
-                        </li>
+                        </li> */}
 
                         <li>
                           <Link href="/clients">

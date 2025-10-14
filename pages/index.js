@@ -100,7 +100,7 @@ export default function Home(initialData) {
                       </div>
                     </Link>
 
-                    <Link href="/work">
+                    {/* <Link href="/work">
                       <div className="relative overflow-hidden">
                         <m.div variants={reveal}>
                           <a className="w-1/2 md:w-auto text-white text-center mix-blend-difference cursor-pointer 2xl:text-[1.1rem] group">
@@ -111,7 +111,7 @@ export default function Home(initialData) {
                           </a>
                         </m.div>
                       </div>
-                    </Link>
+                    </Link> */}
 
                     <Link href="/clients">
                       <div className="relative overflow-hidden">

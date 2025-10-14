@@ -41,38 +41,9 @@ export default function Clients(initialData) {
           >
               <m.div variants={fade}>
                 <Container>
-                  <Tabs>
-                    <TabList className="flex flex-wrap justify-center mb-8">
-                      <Tab>
-                        <button className="p-2 text-2xl lg:text-[32px] xs:p-4 font-display group italic">
-                          <div className="overflow-hidden">
-                            <m.div variants={reveal}>
-                            <span className="block overflow-hidden relative">
-                                <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Clients</span>
-                                <span className="absolute inset-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full ">Clients</span>
-                            </span>
-                            </m.div>
-                          </div>
-                        </button>
-                      </Tab>
-                      <Tab>
-                        <button className="p-2 text-2xl lg:text-[32px] xs:p-4 font-display group italic">
-                          <div className="overflow-hidden">
-                            <m.div variants={reveal}>
-                              <span className="block overflow-hidden relative">
-                                <span className="block relative z-10 transition-transform ease-in-out duration-[450ms] group-hover:-translate-y-full">Recent Projects</span>
-                                <span className="absolute inset-0 block z-10 transition-transform ease-in-out duration-[450ms] group-hover:translate-y-0 translate-y-full ">Recent Projects</span>
-                            </span>
-                            </m.div>
-                          </div>
-                        </button>
-                      </Tab>
-                    </TabList>
-
-                    <TabPanel>
                       <ul className="flex flex-wrap items-center justify-center">
                         {clients.map((client, i) => {
-                          return !client.recent && (
+                          return (
                             <li key={i} className="w-1/2 p-8 xs:p-8 xs:w-1/2 md:p-8 lg:p-10 xl:p-8 2xl:p-16 md:w-[18%] lg:w-[18%] xl:w-[18%]">
 
                               <ConditionalWrap
@@ -94,23 +65,7 @@ export default function Clients(initialData) {
                           )
                         })}
                       </ul>
-                    </TabPanel>
-
-                    <TabPanel>
-                     <ul className="flex flex-wrap items-center justify-center">
-                      {clients.map((client, i) => {
-                        return client.recent && (
-                          <li key={i} className="w-1/2 p-12 xs:w-1/2 md:p-8 lg:p-10 xl:p-8 2xl:p-16 md:w-[23%] lg:w-[18%] xl:w-[18%]">
-                            <img src={client.logo.asset.url} alt={client.title} className="w-full" />
-                          </li>
-                        )
-                      })}
-                      </ul>
-                    </TabPanel>
-
-                  </Tabs>
-
-                  
+                
 
                 </Container>                  
                 
