@@ -41,6 +41,16 @@ export default function Clients(initialData) {
           >
               <m.div variants={fade}>
                 <Container>
+                  <div className="p-2 text-2xl lg:text-[32px] xs:p-4 font-display group italic text-center mx-auto">
+                      <div className="overflow-hidden">
+                        <m.div variants={reveal}>
+                        <span className="block relative text-blue">
+                            <span className="block relative z-10">Clients</span>
+                        </span>
+                        </m.div>
+                      </div>
+                    </div>
+
                       <ul className="flex flex-wrap items-center justify-center">
                         {clients.map((client, i) => {
                           return (
